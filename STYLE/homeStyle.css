@@ -44,6 +44,9 @@ nav > a {
   width: 33.33%;
   border-right: 1px solid #03151d;
 }
+
+
+
 .navigation-bar > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
