@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #3fe1f3;
-  font-family: "Poppins";
+  font-family: "Garamond", serif;
 }
 
 .header {
@@ -27,34 +27,58 @@ body {
 
 
 nav {
-  display: block;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   width: 100%;
-  margin: auto;
+
 }
 
 nav > a {
-  font-family: serif;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
   text-decoration: none;
   background-color: #FFFFFF;
   color: #3fe1f3;
-  border-radius: 12px;
   padding:14px 10px;
+  width: 33.33%;
+  border-right: 1px solid #03151d;
 }
-
 .navigation-bar > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
 }
 
-.container {
-  margin: auto 120px;
-  border-radius: 5px;
-
-}
 
 .content {
   background-color: #FFFFFF;
-  padding: 10px 20px;
+  margin: auto 120px;
+  padding: 10px 27px;
   margin-top: 50px;
+  border-radius: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #03151d;
+  font-family: "Poppins", sans-serif;
+}
+
+section > p,ol {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.5;
+  text-indent: 20px;
+}
+
+
+
+@media screen and (max-width: 700px){
+  nav {
+    display: wrap;
+  }
+  nav > a {
+    width: 100%;
+  }
+
 }
