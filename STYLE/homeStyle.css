@@ -50,6 +50,7 @@ nav > a {
 nav > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
+  border-bottom: 3px solid #03151d;
 }
 
 
