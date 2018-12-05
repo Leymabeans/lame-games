@@ -47,7 +47,7 @@ nav > a {
 
 
 
-.navigation-bar > a:hover {
+nav > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
 }
