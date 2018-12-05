@@ -10,12 +10,13 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #3fe1f3;
-  font-family: "Garamond", serif;
+  font-family: 'Garamond', serif;
 }
 
 .header {
   width: 100%;
   background-color: #03151d;
+  height: auto;
 }
 
 
@@ -31,8 +32,8 @@ nav {
   justify-content: center;
   text-align: center;
   width: 100%;
-
 }
+
 
 nav > a {
   font-family: "Poppins", sans-serif;
@@ -40,7 +41,7 @@ nav > a {
   text-decoration: none;
   background-color: #FFFFFF;
   color: #3fe1f3;
-  padding:14px 10px;
+  padding: 14px 10px;
   width: 33.33%;
 }
 
@@ -49,8 +50,7 @@ nav > a {
 nav > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
-  border: 1px solid #03151d;
-  
+  border-bottom: 3px solid #03151d; 
 }
 
 
@@ -58,7 +58,7 @@ nav > a:hover {
   background-color: #FFFFFF;
   width: 60%;
   margin: auto;
-  padding: 10px 50px;
+  padding: 15px 18px;
   margin-top: 50px;
   border-radius: 8px;
 }
@@ -84,29 +84,34 @@ button {
 
 .download {
   position: absolute;
-  right: 0;
-  margin-top: 10px;
+  right: 10px;
+  margin-top: 15px;
 }
 
 .special {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
+
 .special2 {
-  margin-top: 100px;
+  margin-top: 120px;
 }
+
 .game-list {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.game {
-  width: 33.33%;
-  margin-top: 40px;
-}
 
+.game > img {
+  width: 200px;
+  height: 200px;
+  background-color: #999999;
+}
 
 @media screen and (max-width: 700px){
   nav {
