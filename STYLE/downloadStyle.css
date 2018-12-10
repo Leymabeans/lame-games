@@ -13,6 +13,7 @@ body {
   font-family: 'Garamond', serif;
 }
 
+
 .header {
   width: 100%;
   background-color: #03151d;
@@ -46,7 +47,6 @@ nav > a {
 }
 
 
-
 nav > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
@@ -76,9 +76,18 @@ div > p {
   text-indent: 20px;
 }
 
+
 button {
   padding: 14px;
   background-color: #FFFFFF;
+  border-radius: 7px;
+}
+
+
+button:hover {
+  background-color:#999999;
+  color: #FFFFFF;
+  border: #03151d;
 }
 
 
@@ -88,6 +97,7 @@ button {
   margin-top: 15px;
 }
 
+
 .special {
   margin-bottom: 80px;
 }
@@ -96,6 +106,7 @@ button {
 .special2 {
   margin-top: 120px;
 }
+
 
 .game-list {
   width: 100%;
@@ -113,6 +124,7 @@ button {
   background-color: #999999;
 }
 
+
 @media screen and (max-width: 700px){
   nav {
     display: wrap;
@@ -120,5 +132,4 @@ button {
   nav > a {
     width: 100%;
   }
-
 }
