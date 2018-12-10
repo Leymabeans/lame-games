@@ -13,6 +13,7 @@ body {
   font-family: 'Garamond', serif;
 }
 
+
 .header {
   width: 100%;
   background-color: #03151d;
@@ -46,31 +47,33 @@ nav > a {
 }
 
 
-
 nav > a:hover {
   background-color: #3fe1f3;
   color: #FFFFFF;
   border-bottom: 3px solid #03151d;
 }
 
+
 table {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  justify-content: space-around;
+  width: 80%;
+  margin: auto;
 }
+
 
 table, td, th {
   background-color: #FFFFFF;
   border-collapse: collapse;
   border: 2px solid #03151d;
+  padding: 10px;
 }
+
 
 h2 {
   font-weight: bold;
   color: #03151d;
   font-family: "Poppins", sans-serif;
 }
+
 
 section > p,ol {
   text-align: justify;
@@ -79,15 +82,66 @@ section > p,ol {
   text-indent: 20px;
 }
 
+
+form {
+  width: 60%;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  padding: 15px 50px;
+}
+
+
 .special {
   margin-bottom: 60px;
 }
 
+
+.special2 {
+  margin-top: 120px;
+}
+
+
+.formcomponent {
+  margin-top: 25px;
+}
+
+
+button {
+  padding: 14px;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color:#999999;
+  color: #FFFFFF;
+  border-color: #999999;
+}
+
+
 .first{
   position: absolute;
-  top: 10px;
-  right: 15px;
+  right: 10px;
+  margin-top: 15px;;
 }
+
+
+.important {
+  background-color: #e60000;
+  border-color: #e60000;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+
+.important:hover {
+  background-color: #e60000;
+  border-color: #e60000;
+}
+
+
 @media screen and (max-width: 700px){
   nav {
     display: wrap;
@@ -95,5 +149,4 @@ section > p,ol {
   nav > a {
     width: 100%;
   }
-
 }
