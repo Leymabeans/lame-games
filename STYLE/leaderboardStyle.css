@@ -54,19 +54,22 @@ nav > a:hover {
 }
 
 
-table {
-  width: 80%;
-  margin: auto;
-}
-
-
-table, td, th {
+table, td, th{
   background-color: #FFFFFF;
   border-collapse: collapse;
   border: 2px solid #03151d;
   padding: 10px;
 }
 
+
+table {
+  width: 80%;
+  margin: auto;
+}
+
+th {
+  padding: 25px;
+}
 
 h2 {
   font-weight: bold;
