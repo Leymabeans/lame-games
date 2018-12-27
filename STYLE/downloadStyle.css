@@ -56,9 +56,11 @@ nav > a:hover {
 
 .content {
   background-color: #FFFFFF;
-  width: 60%;
+  width: 100%;
+  min-width: 150px;
+  max-width: 700px;
   margin: auto;
-  padding: 15px 18px;
+  padding: 15px 23px;
   margin-top: 50px;
   border-radius: 8px;
 }
@@ -96,8 +98,18 @@ button:hover {
   position: absolute;
   right: 10px;
   margin-top: 15px;
+  padding: 14px;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
+
+.download:hover {
+  background-color:#999999;
+  color: #FFFFFF;
+  border-color: #999999;
+}
 
 .special {
   margin-bottom: 80px;
@@ -126,11 +138,22 @@ button:hover {
 }
 
 
-@media screen and (max-width: 700px){
-  nav {
-    display: wrap;
+@media only screen and (max-width: 520px){
+  .logo {
+    width: 50%;
   }
+
+  nav {
+    display: block;
+  }
+
   nav > a {
     width: 100%;
+    font-size: 17px;
+    float: left;
+  }
+
+  nav > a:hover {
+    border: none;
   }
 }

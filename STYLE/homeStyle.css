@@ -56,11 +56,13 @@ nav > a:hover {
 
 .content {
   background-color: #FFFFFF;
-  width: 60%;
-  margin: auto;
-  padding: 15px 18px;
-  margin-top: 50px;
+  width: 100%;
+  min-width: 150px;
+  max-width: 700px;
+  padding: 15px 23px;
   border-radius: 8px;
+  margin: auto;
+  margin-top: 50px;
 }
 
 h2 {
@@ -80,12 +82,22 @@ section > p,ol {
   margin-bottom: 60px;
 }
 
-@media screen and (max-width: 700px){
-  nav {
-    display: wrap;
-  }
-  nav > a {
-    width: 100%;
+@media only screen and (max-width: 520px){
+  .logo {
+    width: 50%;
   }
 
+  nav {
+    display: block;
+  }
+
+  nav > a {
+    width: 100%;
+    font-size: 17px;
+    float: left;
+  }
+
+  nav > a:hover {
+    border: none;
+  }
 }
