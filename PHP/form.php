@@ -1,3 +1,20 @@
+<!--Processing for the leaderboard submissions===================-->
+<?php
+      $name = "";
+      $score = "";
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = test_input($_POST["name"]);
+        $score = test_input($_POST["score"]);
+      }
+
+      function test_input($data) {
+        $data = trim($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+    ?>
+
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html>
@@ -46,8 +63,8 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td></td>
-          <td></td>
+          <td><?php echo $name?></td>
+          <td><?php echo $score?></td>
         </tr>
         <tr>
           <td>#2</td>
@@ -91,38 +108,22 @@
         </tr>
       </tbody>
     </table>
-
+<!--Submission Form===============================================-->
     <h2 class="special2" id="bottom">Submit Your Score</h2>
     <form class="special" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
-      <h4>Game</h4>
+      <h4>Player Name</h4>
+      <input type="text" name="name" autocomplete="off" >
+    
+      <h4 class="formcomponent">Game</h4>
       <select name="game">
         <option>Game1</option>
         <option>Game2</option>
-        <option>Game3</option>
-        <option>Game4</option>
       </select>
+
       <h4 class="formcomponent">Score</h4>
-      <input type="text" name="score">
+      <input type="text" name="score" autocomplete = "off">
       <br>
       <button class="formcomponent important">Submit</button>
-    </form>
-  
-    <?php
-      $game = "";
-      $score = "";
-
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $game = test_input($_POST["game"]);
-        $score = test_input($_POST["score"]);
-        echo $game;
-        echo $score;
-      }
-
-      function test_input($data) {
-        $data = trim($data);
-        $data = htmlspecialchars($data);
-        return $data;
-      }
-    ?>  
+    </form> 
   </body>
 </html>
