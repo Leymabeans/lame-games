@@ -24,7 +24,7 @@
   <nav>
     <a href="./home.html">Home</a>
     <a href="./download.html">Download</a>
-    <a href="./leaderboard.html">Leader Board</a>   
+    <a href="./leaderboard.php">Leader Board</a>   
   </nav> 
   
 
@@ -93,7 +93,7 @@
     </table>
 
     <h2 class="special2" id="bottom">Submit Your Score</h2>
-    <form class="special" action="form.php" method="post">
+    <form class="special" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
       <h4>Game</h4>
       <select name="game">
         <option>Game1</option>
@@ -106,5 +106,23 @@
       <br>
       <button class="formcomponent important">Submit</button>
     </form>
+  
+    <?php
+      $game = "";
+      $score = "";
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $game = test_input($_POST["game"]);
+        $score = test_input($_POST["score"]);
+        echo $game;
+        echo $score;
+      }
+
+      function test_input($data) {
+        $data = trim($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+    ?>  
   </body>
 </html>
