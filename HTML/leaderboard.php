@@ -1,3 +1,22 @@
+<!--Processing for the leaderboard submissions===================-->
+<?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $playername = $_POST["playername"];
+    $score = $_POST["score"];
+    $game = $_POST["game"];
+    if ($game == "Game1"){
+      echo "This will print in game table one";
+    }
+    if ($game == "Game2"){
+      echo "This will print in game table two";
+    }
+  else {
+    echo "An error occured when processing this form";
+  }
+?>
+
+
+
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html>
@@ -18,8 +37,6 @@
   </div>
   
 
-
-
 <!--NavBar============================================================-->  
   <nav>
     <a href="./home.html">Home</a>
@@ -28,8 +45,7 @@
   </nav> 
   
 
-
-<!--Content========================================================= -->  
+<!--Game Leaderboard 1========================================================= -->  
     <a href="#bottom">
       <button class="first">Submit Your Score</button>
     </a>
@@ -46,8 +62,8 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td></td>
-          <td></td>
+          <td><?PHP echo $playername ?></td>
+          <td><?PHP echo $score?></td>
         </tr>
         <tr>
           <td>#2</td>
@@ -63,6 +79,7 @@
     </table>
     
 
+<!--Game Leaderboard 2========================================================= --> 
     <h2>Game Title</h2>
     <table class="special">
       <thead>
@@ -76,8 +93,8 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td></td>
-          <td></td>
+          <td><?PHP echo $playername ?></td>
+          <td><?PHP echo $score?></td>
         </tr>
         <tr>
           <td>#2</td>
@@ -91,9 +108,11 @@
         </tr>
       </tbody>
     </table>
+
+
 <!--Submission Form===============================================-->
     <h2 class="special2" id="bottom">Submit Your Score</h2>
-    <form class="special" action="../PHP/form.php" method="post">
+    <form class="special" action="<?PHP echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <h4>Player Name</h4>
       <input type="text" name="playername" autocomplete="off" >
     
@@ -107,38 +126,6 @@
       <input type="text" name="score" autocomplete = "off">
       <br>
       <button class="formcomponent important">Submit</button>
-    </form> 
-
-    <!--Processing for the leaderboard submissions===================-->
-<?php
-      $playername = "";
-      $score = "";
-      $game = $_POST["game"];
-
-      if $game == "Game1" {
-        echo $game;
-      }
-      elseif $game == "Game2" {
-        echo $game;
-      }
-      else {
-        echo "You have not selected a game"
-      }
-
-
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $playername = test_input($_POST["name"]);
-        $score = test_input($_POST["score"]);
-        echo $playername;
-        echo $score;
-      }
-
-      function test_input($data) {
-        $data = trim($data);
-        $data = htmlspecialchars($data);
-        return $data;
-      }
-    ?>
-
+    </form>       
   </body>
 </html>

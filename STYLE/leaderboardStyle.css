@@ -56,9 +56,10 @@ nav > a:hover {
 
 table, td, th{
   background-color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
   border-collapse: collapse;
   border: 2px solid #03151d;
-  padding: 10px;
 }
 
 
