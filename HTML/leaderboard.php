@@ -1,22 +1,22 @@
 <!--Processing for the leaderboard submissions===================-->
 <?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $playername = $_POST["playername"];
-    $score = $_POST["score"];
-    $game = $_POST["game"];
-    if ($game == "Game1"){
-      echo "This will print in game table one";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $playername = $_POST["playername"];
+      $score = $_POST["score"];
+      $game = $_POST["game"];
+      if ($game == "Game1"){
+        echo "This will print in game table one";
+      }
+      if ($game == "Game2"){
+        echo "This will print in game table two";
+      }
+    else {
+      echo "An error occured when processing this form";
     }
-    if ($game == "Game2"){
-      echo "This will print in game table two";
-    }
-  else {
-    echo "An error occured when processing this form";
   }
-?>
+  ?>
 
-
-
+  
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html>
