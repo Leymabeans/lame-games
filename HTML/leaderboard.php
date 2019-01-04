@@ -95,7 +95,7 @@
     <h2 class="special2" id="bottom">Submit Your Score</h2>
     <form class="special" action="../PHP/form.php" method="post">
       <h4>Player Name</h4>
-      <input type="text" name="name" autocomplete="off" >
+      <input type="text" name="playername" autocomplete="off" >
     
       <h4 class="formcomponent">Game</h4>
       <select name="game">
@@ -108,5 +108,37 @@
       <br>
       <button class="formcomponent important">Submit</button>
     </form> 
+
+    <!--Processing for the leaderboard submissions===================-->
+<?php
+      $playername = "";
+      $score = "";
+      $game = $_POST["game"];
+
+      if $game == "Game1" {
+        echo $game;
+      }
+      elseif $game == "Game2" {
+        echo $game;
+      }
+      else {
+        echo "You have not selected a game"
+      }
+
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $playername = test_input($_POST["name"]);
+        $score = test_input($_POST["score"]);
+        echo $playername;
+        echo $score;
+      }
+
+      function test_input($data) {
+        $data = trim($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+    ?>
+
   </body>
 </html>
