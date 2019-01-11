@@ -1,4 +1,4 @@
-inventory = ""
+inventory = ["safe key"]
 room_items = ["candle","lighter","knife"]
 
 def introduction():
@@ -11,7 +11,9 @@ def introduction():
     print("But you know")
     print("You have to get out of there.")
     print("\n \n")
-
+    introduction = input("Press enter to contine")
+    if introduction == " ":
+      instructions()
 
 def instructions():
     print("Escaping is going to be a challege")
@@ -24,17 +26,19 @@ def instructions():
 def game():
   alive = True
   while alive:
-    player_input = input("what are you going to do?")
-    if player_input == "inventory":
-      print(inventory)
+    opening_decision = input("what are you going to do?")
+    if opening_decision == "inventory":
+      print("Inside your backpack, you have:", inventory)
       continue
-    if player_input == "move forward":
-      print("Nice")
-      break
+    if opening_decision == "move forward":
+      print("There is a door in front of you")
+      open_decision = input("Would you like to open it?")
+      if open_decision == "yes":
+        print("The door is locked")
+
+
 
 
 while True:
   introduction() 
-  instructions()
-  game()
   break
