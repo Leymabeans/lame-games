@@ -4,6 +4,7 @@ from termcolor import colored
 inventory = ["safe key"]
 room_items = ["candle","lighter","knife"]
 continue_choice = colored("Press 'c' to continue", "red")
+error_choice = colored("That is not a command", "red")
 
 
 
@@ -42,45 +43,61 @@ def small_instructions():
 
 
 def large_instructions():
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    game()
+    print("Type:")
+    print("'inventory' to see your backpack")
+    print("'open' to open a locked object")
+    print("'move forward' to turn staight and move in that direction")
+    print("'move left' to turn to the left and move in that direction")
+    print("'move backward' to turn backwards and move in that direction")
+    print("'move right' to turn to the right and move in that direction")
+    print("When you receive an error message you will be sent to the beginning again")
+    intro = input(continue_choice)
+    if intro == "c":
+        print("\n")
+        game()
 
 
 #Game loop======================================================================
 def game():
   alive = True
   while alive:
-    opening_decision = input("what are you going to do?")
-    if opening_decision == "help":
+    escape_decision = input("what are you going to do?")
+    if escape_decision == "help":
       large_instructions()
-    if opening_decision == "inventory":
+    if escape_decision == "inventory":
       print("Inside your backpack, you have:", inventory)
       continue
-    if opening_decision == "move forward":
+
+
+    if escape_decision == "move forward":
       print("There is a door in front of you")
       open_decision = input("Try to open it")
       if open_decision == "open":
         if inventory == "door key":
             print("You have left the room and escaped.")
             print("Congratulations")
+            end_game()
         else:
             print("You do not have the key. The door is locked")
       else:
-        print("That is not a command.")
+        print(error_choice)
         continue
 
 
+    if escape_decision == "move left":
+        print("There is a safe in front of you")
+        open_decision = input("Try to open it")
+        if open_decision == "open":
+            if inventory == "safe key":
+                print("You have opened the safe")
+            else:
+                print("You do not have the key. The safe is locked")
+        else:
+            print(error_choice)
 
 
+def end_game():
+    print("You escaped")
 
 while True:
   introduction1()
