@@ -1,50 +1,87 @@
+#Imports and definitions=======================================================
 from termcolor import colored
 
 inventory = ["safe key"]
 room_items = ["candle","lighter","knife"]
+continue_choice = colored("Press 'c' to continue", "red")
 
-def introduction():
-    text = colored("Hey kid", "red")
-    print(text)
-    print("You wake up in a room you've never seen before")
+
+
+
+
+#Introduction and instructions=================================================
+def introduction1():
+    print ("You wake up in a room you've never seen before")
     print("There's a bit of blood on your hands and smeared on your face")
     print("Sitting up, you body aches")
     print("As your feet touch the wooden floor, it creaks")
-    print("\n")
+    intro = input(continue_choice)
+    if intro == "c":
+      print("\n")
+      introduction2()
+
+
+def introduction2():
     print("You don't know where you are")
     print("But you know")
     print("You have to get out of there.")
-    print("\n \n")
-    introduction = input("Press 'c' to continue")
-    if introduction == "c":
-      instructions()
+    intro = input(continue_choice)
+    if intro == "c":
+        print("\n")
+        small_instructions()
 
-def instructions():
-    print("Type 'inventory' to see what's in your backpack")
-    print("Type 'pick up' and 'use' on objects")
-    print("To navigate, type 'move foward, right,left, or back")
+
+def small_instructions():
+    print("Follow all instructions given")
+    print("Type 'help' for a complete list of instructions")
     print("Good luck")
-    introduction = input("Press 'c' to continue")
-    if introduction == "c":
+    intro = input(continue_choice)
+    if intro == "c":
+      print("\n")
       game()
 
 
+def large_instructions():
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    game()
+
+
+#Game loop======================================================================
 def game():
   alive = True
   while alive:
     opening_decision = input("what are you going to do?")
+    if opening_decision == "help":
+      large_instructions()
     if opening_decision == "inventory":
       print("Inside your backpack, you have:", inventory)
       continue
     if opening_decision == "move forward":
       print("There is a door in front of you")
-      open_decision = input("Would you like to open it?")
-      if open_decision == "yes":
-        print("The door is locked")
+      open_decision = input("Try to open it")
+      if open_decision == "open":
+        if inventory == "door key":
+            print("You have left the room and escaped.")
+            print("Congratulations")
+        else:
+            print("You do not have the key. The door is locked")
+      else:
+        print("That is not a command.")
+        continue
+
 
 
 
 
 while True:
-  introduction() 
+  introduction1()
   break
