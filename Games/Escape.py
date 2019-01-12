@@ -1,7 +1,11 @@
+from termcolor import colored
+
 inventory = ["safe key"]
 room_items = ["candle","lighter","knife"]
 
 def introduction():
+    text = colored("Hey kid", "red")
+    print(text)
     print("You wake up in a room you've never seen before")
     print("There's a bit of blood on your hands and smeared on your face")
     print("Sitting up, you body aches")
@@ -11,16 +15,18 @@ def introduction():
     print("But you know")
     print("You have to get out of there.")
     print("\n \n")
-    introduction = input("Press enter to contine")
-    if introduction == " ":
+    introduction = input("Press 'c' to continue")
+    if introduction == "c":
       instructions()
 
 def instructions():
-    print("Escaping is going to be a challege")
     print("Type 'inventory' to see what's in your backpack")
     print("Type 'pick up' and 'use' on objects")
     print("To navigate, type 'move foward, right,left, or back")
     print("Good luck")
+    introduction = input("Press 'c' to continue")
+    if introduction == "c":
+      game()
 
 
 def game():
