@@ -2,7 +2,6 @@
 from termcolor import colored
 
 inventory = ["safe key"]
-room_items = ["candle","lighter","knife"]
 continue_choice = colored("Press 'c' to continue", "red")
 error_choice = colored("That is not a command", "red")
 
@@ -35,7 +34,7 @@ def introduction2():
 def small_instructions():
     print("Follow all instructions given")
     print("Type 'help' for a complete list of instructions")
-    print("Good luck")
+
     intro = input(continue_choice)
     if intro == "c":
       print("\n")
@@ -46,18 +45,31 @@ def large_instructions():
     print("Type:")
     print("'inventory' to see your backpack")
     print("'open' to open a locked object")
-    print("'move forward' to turn staight and move in that direction")
-    print("'move left' to turn to the left and move in that direction")
-    print("'move backward' to turn backwards and move in that direction")
-    print("'move right' to turn to the right and move in that direction")
+    print("'look forward' to turn straight and move in that direction")
+    print("'look left' to turn to the left and move in that direction")
+    print("'look backward' to turn backwards and move in that direction")
+    print("'look right' to turn to the right and move in that direction")
     print("When you receive an error message you will be sent to the beginning again")
+    print("\n")
+    print("This is a map of the room:")
+    print("----------------|___|---------------")
+    print("|                                   |")
+    print("|                                   |")
+    print("|                                   |")
+    print("|  _                                |")
+    print("| |_|           You              ?  |")
+    print("|                                   |")
+    print("|                                   |")
+    print("|                                   |")
+    print("|                                   |")
+    print("----------------|||-----------------|")
     intro = input(continue_choice)
     if intro == "c":
         print("\n")
         game()
 
 
-#Game loop======================================================================
+#Game content======================================================================
 def game():
   alive = True
   while alive:
@@ -65,40 +77,91 @@ def game():
     if escape_decision == "help":
       large_instructions()
     if escape_decision == "inventory":
-      print("Inside your backpack, you have:", inventory)
+      print("Inside your backpack, you have:", inventory[0])
       continue
 
 
-    if escape_decision == "move forward":
+    #Player choice is to 'look' forward'
+    if escape_decision == "look forward":
       print("There is a door in front of you")
       open_decision = input("Try to open it")
       if open_decision == "open":
-        if inventory == "door key":
+        if inventory == "door key" and wire_snip == "blue":
             print("You have left the room and escaped.")
             print("Congratulations")
             end_game()
-        else:
-            print("You do not have the key. The door is locked")
+        if inventory == "door key" and wire_snip != "blue":
+            print("You have the door key. You unlocked the door and esca--")
+            print("There were surveillance cameras watching you")
+            print("They shot you on the spot with their laser")
+            death()
       else:
         print(error_choice)
         continue
 
 
-    if escape_decision == "move left":
+    #Player choice is to 'look left'
+    if escape_decision == "look left":
         print("There is a safe in front of you")
         open_decision = input("Try to open it")
         if open_decision == "open":
-            if inventory == "safe key":
+            if inventory[0] == "safe key":
                 print("You have opened the safe")
+                print("Inside are pliers and a door key")
+                inventory.remove("safe key")
+                inventory.append("pliers")
+                inventory.append("door key")
+                print(inventory)
             else:
-                print("You do not have the key. The safe is locked")
+                print("You do not have the safe key. The safe is locked")
         else:
             print(error_choice)
 
 
+    # Player choice is to 'look backward'
+    if escape_decision == "look backward":
+        print("You notice there are surveillance cameras watching you")
+        print("They have a laser that can kill you in an instant")
+        print("There are three wires: red, blue, and green")
+        print("Cut the right one, and the cameras will disable")
+        wire_snip = input("Which one do you want to cut?")
+        if inventory[0] == "pliers":
+            if wire_snip == "red":
+                print("Wrong choice my friend. Lasers killed you.")
+                death()
+            if wire_snip == "blue":
+                print("Wrong choice my friend. Lasers killed you.")
+                death()
+            if wire_snip == "green":
+                print("Nice job my friend.")
+                print("Cameras are disabled, and you are not")
+                inventory.remove("pliers")
+                print(inventory)
+        else:
+            print("You do not have pliers. The cameras are still on")
+#End Game=======================================================================
 def end_game():
     print("You escaped")
 
-while True:
+
+def death():
+    print("You died")
+
+def restart():
+    restart_decision = input("Do you want to try and escape again?")
+    if restart_decision == "yes":
+        print("Sweet, you got it this time")
+        print("\n")
+        introduction1()
+    if restart_decision == "no":
+        print("Sore loser eh?")
+        print("Well, see ya later")
+    else:
+        print(error_choice)
+
+
+#Game Loop======================================================================
+playing = True
+while playing:
   introduction1()
   break
