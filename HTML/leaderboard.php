@@ -33,7 +33,7 @@
 <!--Header========================================================== -->    
 <body>
   <div class="header"> 
-    <img class="logo" src= "../Lame Games Logo.png" >
+    <img class="logo" src="../Lame Games Logo.png" >
   </div>
   
 
@@ -41,7 +41,7 @@
   <nav>
     <a href="./home.html">Home</a>
     <a href="./download.html">Download</a>
-    <a href="./leaderboard.html">Leader Board</a>   
+    <a href="./leaderboard.php">Leader Board</a>   
   </nav> 
   
 
