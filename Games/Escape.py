@@ -1,4 +1,5 @@
 #Imports and definitions=======================================================
+import sys
 from termcolor import colored
 
 inventory = ["safe key"]
@@ -77,7 +78,7 @@ def game():
     if escape_decision == "help":
       large_instructions()
     if escape_decision == "inventory":
-      print("Inside your backpack, you have:", inventory[0])
+      print("Inside your backpack, you have:", inventory)
       continue
 
 
@@ -109,8 +110,8 @@ def game():
                 print("You have opened the safe")
                 print("Inside are pliers and a door key")
                 inventory.remove("safe key")
-                inventory.append("pliers")
-                inventory.append("door key")
+                inventory.insert(0, "pliers")
+                inventory.insert(1, "door key")
                 print(inventory)
             else:
                 print("You do not have the safe key. The safe is locked")
@@ -139,6 +140,9 @@ def game():
                 print(inventory)
         else:
             print("You do not have pliers. The cameras are still on")
+
+
+
 #End Game=======================================================================
 def end_game():
     print("You escaped")
@@ -146,6 +150,8 @@ def end_game():
 
 def death():
     print("You died")
+    restart()
+
 
 def restart():
     restart_decision = input("Do you want to try and escape again?")
@@ -156,6 +162,7 @@ def restart():
     if restart_decision == "no":
         print("Sore loser eh?")
         print("Well, see ya later")
+        sys.exit()
     else:
         print(error_choice)
 
