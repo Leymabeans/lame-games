@@ -1,20 +1,38 @@
 <!--Processing for the leaderboard submissions===================-->
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $playername = $_POST["playername"];
-      $score = $_POST["score"];
-      $game = $_POST["game"];
-      if ($game == "Game2"){
-        echo "This will print in game table two";
-      }
-      if ($game == "Game1"){
-        echo "This will print in game table one";
-      }
-    else {
-      echo "An error occured when processing this form";
-    }
+  //1 Connect to MySQL database
+  $host = "localhost";
+  $username = "root";
+  $password = "root";
+  $database = "lamegames";
+  $db = mysqli_connect($host, $username, $password, $database) or die('Error connecting to MySQL server');
+
+  //2 Check connection
+  if($db === false){
+    die("Error: Could not connect to the database" . mysqli_connect_error());
   }
-  ?>
+
+  //3 Take the inputed information  
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $pass = $_POST["pass"];
+    $score = $_POST["score"];
+    $game = $_POST["game"];
+}
+
+  //4 Take all information from the lamegames database
+  $query = "SELECT * FROM users";
+  mysqli_query($db, $query) or die("Error querying database");
+
+  //5 Insert information to phpmyadmin
+  $sql = "INSERT INTO users VALUES ('$username', '$_POST[pass]', '$score')";
+  if (!mysqli_query($db, $sql)) {
+    echo 'Error: Could not execute $sql ' . mysqli_error($db);
+  }
+
+  //6 Close connection to MySQL database
+  mysqli_close($db);
+?>
 
 
 <!--Meta Data======================================================= -->
@@ -30,12 +48,14 @@
   </head>
 
 
+
 <!--Header========================================================== -->    
 <body>
   <div class="header"> 
     <img class="logo" src="../MISC/Lame Games Logo.png" >
   </div>
   
+
 
 <!--NavBar============================================================-->  
   <nav>
@@ -44,6 +64,7 @@
     <a href="./leaderboard.php">Leader Board</a>   
   </nav> 
   
+
 
 <!--Game Leaderboard 1========================================================= -->  
     <a href="#bottom">
@@ -62,7 +83,7 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td><?PHP echo $playername ?></td>
+          <td><?PHP echo $username ?></td>
           <td><?PHP echo $score?></td>
         </tr>
         <tr>
@@ -77,7 +98,8 @@
         </tr>
       </tbody>
     </table>
-    
+
+
 
 <!--Game Leaderboard 2========================================================= --> 
     <h2>Game Title</h2>
@@ -93,7 +115,7 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td><?PHP echo $playername ?></td>
+          <td><?PHP echo $username ?></td>
           <td><?PHP echo $score?></td>
         </tr>
         <tr>
@@ -110,12 +132,16 @@
     </table>
 
 
+
 <!--Submission Form===============================================-->
     <h2 class="special2" id="bottom">Submit Your Score</h2>
     <form class="special" action="<?PHP echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <h4>Player Name</h4>
-      <input type="text" name="playername" autocomplete="off" >
+      <input type="text" name="username" autocomplete="off" >
     
+      <h4 class="formcomponent">Player Password</h4>
+      <input type="text" name="pass" autocomplete="off" >
+
       <h4 class="formcomponent">Game</h4>
       <select name="game">
         <option>Game1</option>
@@ -126,6 +152,6 @@
       <input type="text" name="score" autocomplete = "off">
       <br>
       <button class="formcomponent important">Submit</button>
-    </form>       
+    </form>   
   </body>
 </html>
