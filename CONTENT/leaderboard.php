@@ -136,21 +136,24 @@
 <!--Submission Form===============================================-->
     <h2 class="special2" id="bottom">Submit Your Score</h2>
     <form class="special" action="<?PHP echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <h4>Player Name</h4>
-      <input type="text" name="username" autocomplete="off" >
-    
-      <h4 class="formcomponent">Player Password</h4>
-      <input type="text" name="pass" autocomplete="off" >
+      <h4>Not Logged in? Login now</h4>
+      <button> Login</button>
+      <br><br>
+      <input type="text" name="username" autocomplete="off" placeholder="Username">
+      <br>
 
-      <h4 class="formcomponent">Game</h4>
-      <select name="game">
+      <input class="formcomponent" type="text" name="pass" autocomplete="off" placeholder="Password">
+      <br>
+
+      <select class="formcomponent" name="game">
         <option>Game1</option>
         <option>Game2</option>
       </select>
-
-      <h4 class="formcomponent">Score</h4>
-      <input type="text" name="score" autocomplete = "off">
       <br>
+
+      <input class="formcomponent" type="text" name="score" autocomplete="off" placeholder="Score">
+      <br>
+
       <button class="formcomponent important">Submit</button>
     </form>   
   </body>
