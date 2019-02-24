@@ -4,7 +4,7 @@
   $host = "localhost";
   $username = "root";
   $password = "root";
-  $database = "lamegames";
+  $database = "z_lamegames";
   $db = mysqli_connect($host, $username, $password, $database) or die('Error connecting to MySQL server');
 
   //2 Check connection
@@ -13,7 +13,7 @@
   }
 
   //3 Take the inputed information  
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if ($SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $pass = $_POST["pass"];
     $score = $_POST["score"];
