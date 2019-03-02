@@ -1,3 +1,4 @@
+/*Changed default styling====================*/
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -9,6 +10,11 @@
   display: none;
 }
 
+
+
+
+
+/*Header=====================================*/
 #logo {
   display: block;
   width: 90px;
@@ -16,7 +22,6 @@
   border-radius: 10px;
   margin: 50px auto;
 }
-
 
 nav {
   display: flex;
@@ -47,6 +52,10 @@ nav > a {
   background-color: #E5E338;
 }
 
+
+
+
+/*Parallax scrolling image====================*/
 .parrallax {
   background-image: url("../MISC/parrallax.jpg");
   background-color: #18121E;
@@ -75,6 +84,10 @@ nav > a {
   margin: 50px auto;
 }
 
+
+
+
+/*Content=========================================*/
 h2 {
   color: #4EC5C1;
   margin-top: 40px;
@@ -98,4 +111,30 @@ ol {
 
 .none {
   text-indent: none;
+}
+
+
+
+
+
+
+/*Footer=========================================*/
+footer {
+  background-color: #0f1626;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  height: 150px;
+}
+
+footer > span:before {
+  content: ' \00A9'
+}
+
+ a > i {
+  margin: 20px 50px;
+}
+
+i.fab {
+  color: #ffffff;
 }
