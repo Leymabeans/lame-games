@@ -39,31 +39,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Leader Board</title>
+    <title>Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,700" rel="stylesheet">
-    <link href="../STYLE/leaderboardStyle.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="shortcut icon" href="../MISC/LGLogo.ico">
+    <link href="../STYLE/leaderboard.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
 
 
 
 <!--Header========================================================== -->    
-<body>
-  <div class="header"> 
-    <img class="logo" src="../MISC/Lame Games Logo.png" >
-  </div>
-  
-
-
-<!--NavBar============================================================-->  
-  <nav>
-    <a href="./home.html">Home</a>
-    <a href="./download.html">Download</a>
-    <a href="./leaderboard.php">Leader Board</a>   
-  </nav> 
-  
+  <body>
+    <nav>
+      <a class="home" href="./index.html">Home</a>
+      <a class="download" href="./download.html">Download</a>
+      <a class="leaderboard" href="./leaderboard.php">Leader Board</a>   
+    </nav>    
+    
 
 
 <!--Game Leaderboard 1========================================================= -->  
