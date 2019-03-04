@@ -76,6 +76,9 @@ nav > a {
   text-align: center;
 }
 
+
+
+/*Content=========================================*/
 .content {
   width: 70%;
   max-width: 640px;
@@ -84,10 +87,6 @@ nav > a {
   margin: 50px auto;
 }
 
-
-
-
-/*Content=========================================*/
 h2 {
   color: #4EC5C1;
   margin-top: 40px;
@@ -103,11 +102,17 @@ p {
   text-indent: 20px;
 }
 
+p > a {
+  color: #E5E338;
+  text-decoration: none;
+}
+
 ol {
   font-size: 17px;
   margin-left: 40px;
   line-height: 1.6;
 }
+
 
 .none {
   text-indent: none;
