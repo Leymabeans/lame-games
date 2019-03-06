@@ -1,40 +1,3 @@
-<!--Processing for the leaderboard submissions===================-->
-<?php
-  //1 Connect to MySQL database
-  $host = "localhost";
-  $username = "root";
-  $password = "root";
-  $database = "z_lamegames";
-  $db = mysqli_connect($host, $username, $password, $database) or die('Error connecting to MySQL server');
-
-  //2 Check connection
-  if($db === false){
-    die("Error: Could not connect to the database" . mysqli_connect_error());
-  }
-
-  //3 Take the inputed information  
-  if ($SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $pass = $_POST["pass"];
-    $score = $_POST["score"];
-    $game = $_POST["game"];
-}
-
-  //4 Take all information from the lamegames database
-  $query = "SELECT * FROM users";
-  mysqli_query($db, $query) or die("Error querying database");
-
-  //5 Insert information to phpmyadmin
-  $sql = "INSERT INTO users VALUES ('$username', '$_POST[pass]', '$score')";
-  if (!mysqli_query($db, $sql)) {
-    echo 'Error: Could not execute $sql ' . mysqli_error($db);
-  }
-
-  //6 Close connection to MySQL database
-  mysqli_close($db);
-?>
-
-
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html>
@@ -77,8 +40,8 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td><?PHP echo $username ?></td>
-          <td><?PHP echo $score?></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <td>#2</td>
@@ -109,8 +72,8 @@
       <tbody>
         <tr>
           <td>#1</td>
-          <td><?PHP echo $username ?></td>
-          <td><?PHP echo $score?></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <td>#2</td>
@@ -123,32 +86,6 @@
           <td></td>
         </tr>
       </tbody>
-    </table>
-
-
-
-<!--Submission Form===============================================-->
-    <h2 class="special2" id="bottom">Submit Your Score</h2>
-    <form class="special" action="<?PHP echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <h4>Not Logged in? Login now</h4>
-      <button> Login</button>
-      <br><br>
-      <input type="text" name="username" autocomplete="off" placeholder="Username">
-      <br>
-
-      <input class="formcomponent" type="text" name="pass" autocomplete="off" placeholder="Password">
-      <br>
-
-      <select class="formcomponent" name="game">
-        <option>Game1</option>
-        <option>Game2</option>
-      </select>
-      <br>
-
-      <input class="formcomponent" type="text" name="score" autocomplete="off" placeholder="Score">
-      <br>
-
-      <button class="formcomponent important">Submit</button>
-    </form>   
+    </table> 
   </body>
 </html>
