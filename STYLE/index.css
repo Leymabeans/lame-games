@@ -14,52 +14,11 @@
 
 
 
-/*Header=====================================*/
-#logo {
-  display: block;
-  width: 90px;
-  height: 90px;
-  border-radius: 10px;
-  margin: 50px auto;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-
-nav > a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #ffffff;
-  width: 33.33%;
-  padding: 14px 10px;
-  
-}
-
-.home {
-  color: #233237;
-  background-color: #ffffff;
-}
-
-.download {
-  background-color: #4EC5C1;
-}
-
-.leaderboard {
-  background-color: #E5E338;
-}
-
-
-
-
 /*Parallax scrolling image====================*/
 .parrallax {
   background-image: url("../MISC/parrallax.jpg");
   background-color: #18121E;
-  height: 700px;
+  height: 800px;
   filter: brightness(0.2);
   background-attachment: fixed;
   background-position: center;
@@ -87,13 +46,17 @@ nav > a {
   margin: 50px auto;
 }
 
-h2 {
-  color: #4EC5C1;
-  margin-top: 40px;
+#logo {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  margin: 50px auto;
 }
 
-section {
-  margin-bottom: 70px;
+h2 {
+  color: #286DA8;
+  margin-top: 40px;
 }
 
 p {
@@ -103,7 +66,7 @@ p {
 }
 
 p > a {
-  color: #E5E338;
+  color: #B37D4E;
   text-decoration: none;
 }
 
@@ -114,18 +77,10 @@ ol {
 }
 
 
-.none {
-  text-indent: none;
-}
-
-
-
-
-
 
 /*Footer=========================================*/
 footer {
-  background-color: #4EC5C1;
+  background-color: #286DA8;
   color: #ffffff;
   text-align: center;
   font-size: 12px;
