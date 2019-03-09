@@ -1,5 +1,6 @@
 /*Changed default styling====================*/
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -13,13 +14,11 @@
 
 
 
-
 /*Parallax scrolling image====================*/
 .parrallax {
   background-image: url("../MISC/parrallax.jpg");
-  background-color: #18121E;
   height: 800px;
-  filter: brightness(0.2);
+  filter: brightness(0.1);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,10 +30,13 @@
   color: #ffffff;
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 40%;
   text-align: center;
 }
 
+.presentation > h1 {
+  font-size: 50px;
+}
 
 
 /*Content=========================================*/
@@ -55,7 +57,7 @@
 }
 
 h2 {
-  color: #286DA8;
+  color:#01ABAA;
   margin-top: 40px;
 }
 
@@ -66,9 +68,11 @@ p {
 }
 
 p > a {
-  color: #B37D4E;
+  color:#FEA680;
   text-decoration: none;
 }
+
+
 
 ol {
   font-size: 17px;
@@ -76,11 +80,50 @@ ol {
   line-height: 1.6;
 }
 
+.downloadLink {
+  display: block;
+  width: 300px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #01ABAA;
+  color: #ffffff;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 70px auto;
+}
+
+
+/*LeaderBoards===================================*/
+table {
+  text-align: left;
+  padding: 20px;
+  border: 3px solid #01ABAA;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+th {
+  color: #FEA680;
+  font-size: 18px;
+}
+
+td {
+  padding: 8px;
+}
+
+.place, .score {
+  width: 100px;
+}
+
+.name {
+  width: 450px;
+}
 
 
 /*Footer=========================================*/
 footer {
-  background-color: #286DA8;
+  background-color: #01ABAA;
   color: #ffffff;
   text-align: center;
   font-size: 12px;
