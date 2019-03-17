@@ -39,7 +39,7 @@
       <h2>Part 1: The Competition</h2>
       <p>The competition is a timed event in which both Nathan and Andrew 
       must create the best game possible using the programming language,
-      Python. The reason behind the name "Lame Games",comes from the competition
+      Python. The reason behind the name "Lame Games" ,comes from the competition
       where, under strict time limits, it is hard to create good games. The rules
       for the game are as follows:</p> 
       <br>
@@ -48,14 +48,14 @@
         <ol>
           <li>The time limit in the competition is 30 minutes</li>
           <li>Competitors must start with a clean, empty file to begin</li>
-          <li>The only language used must be Python</li>
-          <li>There can be no copying and pasting from previous projects</li>
+          <li>The language used to create the games must be Python</li>
+          <li>There can be no copying and pasting from past projects</li>
         </ol>
       </div>
 
       <h2>Part 2: Playable Games</h2>
       <p>On the other hand, Lame Game creators make games outside of the competition and
-      the downloadable games have had much time and work put into. Players can create a 
+      these downloadable games have had much time and work put into. Players can create a 
       free account and download our provided games. You can
       also <a href="#bottom">check your stats and comparisons to other players</a>.</p>
       <br>
@@ -80,13 +80,13 @@
         <tbody>
           <tr>
             <td>#1</td>
-            <td>Leyzees</td>
-            <td>122</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>#2</td>
-            <td>Cool_Runner</td>
-            <td>43</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>#3</td>
@@ -124,13 +124,13 @@
         <tbody>
           <tr>
             <td>#1</td>
-            <td>Leyzees</td>
-            <td>600</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>#2</td>
-            <td>Cool_Runner</td>
-            <td>314</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>#3</td>
