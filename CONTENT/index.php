@@ -36,6 +36,7 @@
         by the public, as well as a friendly game developing 
         competition.</p>
       </section>
+      <img class="setup" src="https://farm3.staticflickr.com/2856/8941098081_e1ac60e5e5_b.jpg">
 
 
       <section class="competition">
@@ -65,14 +66,15 @@
         <br>
       </section>
 </div>
-      <a href="#" class="downloadLink">Download Our Games!</a>
+      <a href="#" class="downloadLink space">Download Our Games!</a>
 
 
 
 
 <!--Game Leaderboard 1========================================================= --> 
+    <div class="leaderboard"> 
       <a name="bottom"></a>
-      <h2>Cross Country Collin</h2><br>
+      <h2 class="gametitle" >Cross Country Collin</h2><br>
       <table>
         <thead>
           <tr>
@@ -116,7 +118,8 @@
 
 
   <!--Game Leaderboard 2========================================================= --> 
-      <h2>Escape</h2><br>
+      
+      <h2 class="gametitle">Escape</h2><br>
       <table>
         <thead>
           <tr>
