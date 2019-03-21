@@ -27,39 +27,44 @@
 
 
 <!--Content========================================================= -->  
-    <div class="content">
-      <h2>About</h2>
-      <p>Lame Games is an organization created by Nathan Ley and
-       Andrew Zweifel to bring programming and fun together. 
-       Lame Games offers fully developed games that can be played 
-       by the public, as well as a friendly game developing 
-       competition.</p>
-      <br>
+    <div class="grid-container content">
+      <section class="about">
+        <h2>About</h2>
+        <p>Lame Games is an organization created by Nathan Ley and
+        Andrew Zweifel to bring programming and fun together. 
+        Lame Games offers fully developed games that can be played 
+        by the public, as well as a friendly game developing 
+        competition.</p>
+      </section>
 
-      <h2>Part 1: The Competition</h2>
-      <p>The competition is a timed event in which both Nathan and Andrew 
-      must create the best game possible using the programming language,
-      Python. The reason behind the name "Lame Games" ,comes from the competition
-      where, under strict time limits, it is hard to create good games. The rules
-      for the game are as follows:</p> 
-      <br>
 
-      <div class= "list">
-        <ol>
-          <li>The time limit in the competition is 30 minutes</li>
-          <li>Competitors must start with a clean, empty file to begin</li>
-          <li>The language used to create the games must be Python</li>
-          <li>There can be no copying and pasting from past projects</li>
-        </ol>
-      </div>
+      <section class="competition">
+        <h2>Part 1: The Competition</h2>
+        <p>The competition is a timed event in which both Nathan and Andrew 
+        must create the best game possible using the programming language,
+        Python. The reason behind the name "Lame Games" ,comes from the competition
+        where, under strict time limits, it is hard to create good games. The rules
+        for the game are as follows:</p> 
+        <br>
+        <div class= "list">
+          <ol>
+            <li>The time limit in the competition is 30 minutes</li>
+            <li>Competitors must start with a clean, empty file to begin</li>
+            <li>The language used to create the games must be Python</li>
+            <li>There can be no copying and pasting from past projects</li>
+          </ol>
+        </div>
+      </section>
 
-      <h2>Part 2: Playable Games</h2>
-      <p>On the other hand, Lame Game creators make games outside of the competition and
-      these downloadable games have had much time and work put into. Players can create a 
-      free account and download our provided games. You can
-      also <a href="#bottom">check your stats and comparisons to other players</a>.</p>
-      <br>
-
+      <section class="playgame">
+        <h2>Part 2: Playable Games</h2>
+        <p>On the other hand, Lame Game creators make games outside of the competition and
+        these downloadable games have had much time and work put into. Players can create a 
+        free account and download our provided games. You can
+        also <a href="#bottom">check your stats and comparisons to other players</a>.</p>
+        <br>
+      </section>
+</div>
       <a href="#" class="downloadLink">Download Our Games!</a>
 
 
