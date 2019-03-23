@@ -13,8 +13,19 @@
 
 
 
+<!--Nav Bar==========================================================-->
+  <body>
+    <nav>
+      <a class="home" href="#">Home</a>
+      <a class="news" href="#">News</a>
+      <a class="leaderboard" href="#">Leaderboard</a>
+      <a class="profile" href="#">Profile</a>
+      <img src="../MISC/LGLogo.png">
+    </nav>
+
 
 <!--Parrallax Scrolling Image========================================-->
+  
     <div class="parrallax"></div>
     <div class="presentation">
       <h1>Lame Games</h1>
@@ -29,7 +40,7 @@
 <!--Content========================================================= -->  
     <div class="grid-container content">
       <section class="about">
-        <h2>About</h2>
+        <h2>What is Lame Games?</h2>
         <p>Lame Games is an organization created by Nathan Ley and
         Andrew Zweifel to bring programming and fun together. 
         Lame Games offers fully developed games that can be played 
@@ -65,7 +76,7 @@
         also <a href="#bottom">check your stats and comparisons to other players</a>.</p>
         <br>
       </section>
-</div>
+    </div>
       <a href="#" class="downloadLink space">Download Our Games!</a>
 
 
