@@ -10,45 +10,64 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
     <link href="../STYLE/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script>
+      var myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }   
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+      }
+    </script>
   </head>
 
 
 
+<!--Loader===========================================================-->
+  <body onload="myFunction()">
+    <div id="loader"></div>
+
+
+
 <!--Nav Bar==========================================================-->
-  <body>
-    <nav class="menu">
-      <div class="menu-container">
-        <ul class="menu-list">
-          <li class="menu-item">
-            <a class="menu-link" href="./index.htm">Home</a>    
-          </li>
-          <li>
-            <a class="menu-link" href="./news.htm">News</a>   
-          </li>
-          <li>
-            <a class="menu-link" href="./leaderboard.php">Leaderboard</a>   
-          </li>
-          <li>
-            <a class="menu-link" href="./profile.php">Profile</a>  
-          </li>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox"/>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="./index.htm">
+            <li>Home</li>
+          </a>
+          <a href="./leaderboard.php">
+            <li>Leaderboard</li>
+          </a>
+          <a href="./profile.php">
+            <li>Profile</li>
+          </a>
         </ul>
       </div>
-      <a class="menu-toggle">
-        <span class="menu-hamburger"></span>
-      </a>
     </nav>
     
-    <script>
-      $('.menu-toggle').on('click', function(){
-        $('.menu').toggleClass('active');
-      });
-    </script>
+
     
+    
+<!--Slide Show======================================================-->
+    <div class="fling-minislide">
+        <img src="../MISC/pygame_logo.png"/>
+        <img src="../MISC/dream.jpg"/>
+        <img src="../MISC/setup.jpg"/>
+        <img src="../MISC/parrallax.jpg"/>
+      </div>  
+
+
 
 <!--Content========================================================= -->  
-    <div class="grid-container content">
       
+
+    <div class="grid-container content">
       <section class="about">
         <h2>About</h2>
         <p>Lame Games is an organization created by Nathan Ley and
@@ -57,12 +76,7 @@
         by the public, as well as a friendly game developing 
         competition.</p>
       </section>
-      <div class="fling-minislide">
-          <img src="../MISC/pygame_logo.png"/>
-          <img src="../MISC/dream.jpg"/>
-          <img src="../MISC/setup.jpg"/>
-          <img src="../MISC/parrallax.jpg"/>
-        </div>
+      
 
       <section class="competition">
         <h2>Part 1: The Competition</h2>
