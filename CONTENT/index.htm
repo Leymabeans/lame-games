@@ -10,36 +10,45 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
     <link href="../STYLE/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   </head>
 
 
 
 <!--Nav Bar==========================================================-->
   <body>
-    <nav>
-      <a class="home" href="./index.htm">Home</a>
-      <a class="news" href="./news.htm">News</a>
-      <a class="leaderboard" href="./leaderboard.php">Leaderboard</a>
-      <a class="profile" href="./profile.php">Profile</a>
-      <img src="../MISC/LGLogo.png">
+    <nav class="menu">
+      <div class="menu-container">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a class="menu-link" href="./index.htm">Home</a>    
+          </li>
+          <li>
+            <a class="menu-link" href="./news.htm">News</a>   
+          </li>
+          <li>
+            <a class="menu-link" href="./leaderboard.php">Leaderboard</a>   
+          </li>
+          <li>
+            <a class="menu-link" href="./profile.php">Profile</a>  
+          </li>
+        </ul>
+      </div>
+      <a class="menu-toggle">
+        <span class="menu-hamburger"></span>
+      </a>
     </nav>
-
-
-<!--Parrallax Scrolling Image========================================-->
-  
-    <div class="parrallax"></div>
-    <div class="presentation">
-      <h1>Lame Games</h1>
-      <p>__________</p>
-      <br>
-      <h4>Wasting time since 2018</h4>
-    </div>
-
-
-
+    
+    <script>
+      $('.menu-toggle').on('click', function(){
+        $('.menu').toggleClass('active');
+      });
+    </script>
+    
 
 <!--Content========================================================= -->  
     <div class="grid-container content">
+      
       <section class="about">
         <h2>About</h2>
         <p>Lame Games is an organization created by Nathan Ley and
@@ -48,8 +57,12 @@
         by the public, as well as a friendly game developing 
         competition.</p>
       </section>
-      <img class="setup" src="https://farm3.staticflickr.com/2856/8941098081_e1ac60e5e5_b.jpg">
-
+      <div class="fling-minislide">
+          <img src="../MISC/pygame_logo.png"/>
+          <img src="../MISC/dream.jpg"/>
+          <img src="../MISC/setup.jpg"/>
+          <img src="../MISC/parrallax.jpg"/>
+        </div>
 
       <section class="competition">
         <h2>Part 1: The Competition</h2>
