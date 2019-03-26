@@ -26,10 +26,8 @@ body {
 /*Loader=====================================*/
 #loader {
   position: relative;
-  left: 50%;
-  top: 50%;
   z-index: 1;
-  margin: 75px 0 800px 0;
+  margin: 300px auto;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid tomato;
@@ -40,7 +38,8 @@ body {
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(720deg); }
 }
 
 
@@ -163,7 +162,7 @@ a:hover {
   animation:fling-minislide 20s infinite; 
   opacity:0; 
   width: 100%; 
-  height: auto;
+  height: 800px;
 }
 
 @keyframes fling-minislide {
