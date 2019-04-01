@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   background: #232323;
-  color: #cdcdcd;
   font-family: 'Open Sans', sans-serif;
 }
   
@@ -188,14 +187,16 @@ section {
 .about {
   grid-column: 3 / 6;
   background-color: tomato;
+  color: #ededed;
   height: auto;
   margin: 40px;
 }
 
 .competition {
   grid-column: 1 / 4;
-  background-color: #ffffff;
+  background-color: #ededed;
   color: tomato;
+  height: auto;
   margin: 40px;
 }
 
@@ -203,7 +204,7 @@ section {
 .playgame {
   grid-column: 3 / 6;
   background-color: tomato;
-  color: #ffffff;
+  color: #ededed;
   margin: 40px;
 }
 
@@ -231,12 +232,10 @@ section {
 
 h2 {
   font-family: 'Merriweather', 'serif';
-  color: #ffffff;
   margin-top: 40px;
 }
 
 p {
-  color: #ffffff;
   font-size: 17px;
   font-weight: 300;
   line-height: 1.6;
@@ -244,15 +243,13 @@ p {
 }
 
 p > a {
-  color: #98878F;
+  color: #232323;
   text-decoration: none;
 }
 
 ol {
-  color: #ffffff;
   font-size: 17px;
   font-weight: 300;
-  margin-left: 40px;
   line-height: 1.6;
 }
 
