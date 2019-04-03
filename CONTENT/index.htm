@@ -14,7 +14,7 @@
       var myVar;
 
       function myFunction() {
-        myVar = setTimeout(showPage, 2000);
+        myVar = setTimeout(showPage, 1500);
       }   
       function showPage() {
         document.getElementById("loader").style.display = "none";
@@ -38,13 +38,13 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="./index.htm">
+          <a class="pages" href="./index.htm">
             <li>Home</li>
           </a>
-          <a href="./leaderboard.php">
+          <a class="pages" href="./leaderboard.php">
             <li>Leaderboard</li>
           </a>
-          <a href="./profile.php">
+          <a class="pages" href="./profile.php">
             <li>Profile</li>
           </a>
         </ul>
@@ -55,8 +55,7 @@
 
     
 <!--Slide Show======================================================-->
-    <div class="fling-minislide">
-        <img src="../MISC/python.jpg"/>
+    <div class="slideshow">
         <img src="../MISC/parrallax.jpg"/>
         <img src="../MISC/setup.jpg"/>
         <img src="../MISC/hacking.jpg"/>
@@ -99,7 +98,7 @@
         <p>On the other hand, Lame Game creators make games outside of the competition and
         these downloadable games have had much time and work put into. Players can create a 
         free account and download our provided games. You can
-        also <a href="./leaderboard.php">check your stats and comparisons to other players</a></p>
+        also <a class="statCheck" href="./leaderboard.php">check your stats and comparisons to other players</a></p>
         <br>
       </section>
     </div>
