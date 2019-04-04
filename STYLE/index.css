@@ -110,7 +110,7 @@ body {
 
 #menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #menuToggle span {
@@ -266,7 +266,7 @@ ol {
 
 table {
   text-align: left;
-  border: 3px solid #494E6B;
+  border: 3px solid tomato;
   border-collapse: collapse;
   border-radius: 10px;
   margin: auto;
@@ -274,24 +274,24 @@ table {
 }
 
 th {
-  background-color: #494E6B;
+  background-color: tomato;
   color: #ffffff;
   font-size: 18px;
   padding: 18px;
-  border: 1px solid #494E6B;
+  border: 1px solid tomato;
 }
 
 td {
   padding: 18px;
-  border: 1px solid #494E6B;
+  border: 1px solid tomato;
 }
 
-tr:nth-child(even){
-  background-color: rgb(214, 213, 214);
+tr {
+  background-color: #ffffff;
 }
 
 .gametitle {
-  color: #494E6B;
+  color: tomato;
   font-size: 18px;
   margin: auto;
 }
