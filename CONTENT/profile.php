@@ -1,3 +1,9 @@
+<?php
+ $username="Leyzees";
+ $location="Paynesville";
+ $leaderboardInfo = "Rank: 1";
+?>
+
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +57,15 @@
       </div>
     </nav>
     
+    <div class="profile">
+      <img class="profilePic" src="#">
+      <span><?php echo $username . "," ?></span> 
+      <span><?php echo $location ?></span>  
+    </div>  
 
-
+    <div class="leaderboardRanks">
+      <span><?php echo $leaderboardInfo ?></span> 
+    </div>
 <!--Footer========================================================-->
 <footer>
       <br><br><br>
