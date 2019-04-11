@@ -1,0 +1,79 @@
+/*Changed default styling====================*/
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("../MISC/ocean.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+  
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+/*Login======================================*/
+.signin {
+  float: left;
+  text-align: center;
+  background-color: rgba(46, 116, 247, 0.5);
+  width: 33.33%;
+  border-radius: 10px;
+  padding: 15px 0px;
+  margin: 150px auto;
+}
+
+.display {
+  opacity: 1;
+}
+
+
+.or {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+  padding: 15px 0px;
+  margin: 150px auto;
+}
+
+h1, h2 {
+  color: #ffffff;
+}
+
+.or {
+  margin-top: 200px;
+}
+
+.input {
+  text-align: center;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px auto;
+}
+
+input:focus {
+  outline: 0;
+}
+
+input[type="submit"] {
+  transition: opacity 1s;
+  background-color: #ffffff;
+  text-align: center;
+  width: 90px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin-top: 30px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
