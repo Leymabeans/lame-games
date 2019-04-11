@@ -8,7 +8,7 @@
     <link href="../MISC/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="../STYLE/index.css" rel="stylesheet" type="text/css">
+    <link href="./index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
     <script>
       var myVar;
@@ -44,7 +44,7 @@
           <a class="pages" href="./leaderboard.php">
             <li>Leaderboard</li>
           </a>
-          <a class="pages" href="./profile.php">
+          <a class="pages" href="../LOGIN/login_prep.htm">
             <li>Profile</li>
           </a>
         </ul>
