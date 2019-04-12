@@ -50,48 +50,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login or Register</title>
+    <title>Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../MISC/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./login.css" rel="stylesheet" type="text/css">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
+    <link href="./loginSystem.css" rel="stylesheet" type="text/css">
   </head>
 
-
-
-<!--Loader===========================================================-->
-  <body onload="myFunction()">
-    <div id="loader"></div>
-
-
-
-<!--Login Form=======================================================-->     
-    <div class="signin">
-      <h1>Sign Up</h1>
-      <form method="post" action="login.php">
-        <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username"><br>
-        <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password"><br>
-        <input type="submit" value="Sign Up">
-      </form>
-    </div>
-
-    <h2 class="or"> Or </h2>
-
-    <div class="signin">
-      <h1>Login</h1>
-      <form method="post" action="../CONTENT/profile.php">
-        <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username"><br>
-        <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password"><br>
-        <input type="submit" value="Login">
-      </form>
-    </div>
-  
-    
-
-    
-  
-  </body>
-</html>
