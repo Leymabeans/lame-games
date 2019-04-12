@@ -1,17 +1,15 @@
 <?php
-/*
   session_start();
-  if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false) {
-    header("Location: login.php");
+  if(!isset($_SESSION['username'])){
+    header("Location: ../LoginSystem/login.php");
   }
-*/
 ?>
 
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../MISC/LGLogo.ico" rel="shortcut icon">
@@ -61,7 +59,7 @@
     </nav>
 
     <h2>Registration Successful!</h2>
-
+    <a href="../LoginSystem/logout.php">Logout</a>
 
     
 <!--Footer========================================================-->
