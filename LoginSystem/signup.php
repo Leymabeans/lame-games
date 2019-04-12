@@ -38,6 +38,7 @@
   else {
     $registration = "INSERT INTO useraccount (Username, Password) VALUES ('$username', '$password')";
     mysqli_query($db, $registration);
+    $_SESSION['username'] = $username;
     header("Location: ../CONTENT/profile.php");
   }
 
