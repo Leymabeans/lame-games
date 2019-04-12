@@ -44,7 +44,7 @@
           <a class="pages" href="./leaderboard.php">
             <li>Leaderboard</li>
           </a>
-          <a class="pages" href="../LOGIN/login_prep.htm">
+          <a class="pages" href="../LOGIN/login.php">
             <li>Profile</li>
           </a>
         </ul>

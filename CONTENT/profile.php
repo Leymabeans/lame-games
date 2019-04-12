@@ -53,14 +53,14 @@
           <a class="pages" href="./leaderboard.php">
             <li>Leaderboard</li>
           </a>
-          <a class="pages" href="../LOGIN/login_prep.htm">
+          <a class="pages" href="./profile.php">
             <li>Profile</li>
           </a>
         </ul>
       </div>
     </nav>
 
-    <h2>You are sucessfully logged in!</h2>
+    <h2>Registration Successful!</h2>
 
 
     
