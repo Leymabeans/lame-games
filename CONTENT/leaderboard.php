@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>Leaderboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../MISC/LGLogo.ico" rel="shortcut icon">
@@ -44,7 +44,7 @@
           <a class="pages" href="./leaderboard.php">
             <li>Leaderboard</li>
           </a>
-          <a class="pages" href="../LOGIN/login.php">
+          <a class="pages" href="../LoginSystem/lor.php">
             <li>Profile</li>
           </a>
         </ul>
