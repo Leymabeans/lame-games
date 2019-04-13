@@ -1,4 +1,4 @@
-/*Changed default styling====================*/
+/*Changed default styling==========================*/
 body {
   margin: 0;
   padding: 0;
@@ -14,13 +14,13 @@ body {
   text-align: justify;
 }
 
-::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 
 
-/*Loader=====================================*/
+/*Loader==========================================*/
 #loader {
   position: relative;
   z-index: 1;
@@ -43,7 +43,7 @@ body {
 
 
 
-/*Nav Bar====================================*/
+/*Nav Bar=======================================*/
 #menuToggle {
   display: block;
   position: relative;
@@ -138,7 +138,9 @@ body {
 
 
 
-/*Banner======================================*/
+
+
+/*Banner===========================================*/
 .container {
   position: relative;
 }
@@ -167,7 +169,7 @@ h1 {
 
 
 
-/*Content=========================================*/
+/*Content==========================================*/
 section {
   min-width: 300px;
   max-width: 500px;
@@ -175,59 +177,125 @@ section {
   border-radius: 16px;
 }
 
+
+/*Paragraph content====*/
 .about {
   grid-column: 1 / 2;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px 50%;
   margin: 50px;
 }
 
 .competition {
-  grid-column: 4 / 6;
-  margin-top: 50px;
+  grid-column: 3 / 5;
+  background: linear-gradient(to bottom right, #fff 0%, #fff 50%, rgba(0, 0, 50, 0.1) 50%, rgba(0, 0, 50, 0.1) 100%);
+  text-align: center;
+  padding: 30px;
+  margin: 50px;
 }
 
 .playgame {
   grid-column: 1 / 2;
+  padding: 30px;
   margin-top: 50px;
 }
 
-#triangle-down {
-  grid-column: 4 / 6;
-  margin: 200px 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 200px solid rgba(0, 0, 50, 0.5);
-}
 
-#circle {
-  grid-column: 2 / 3;
-  margin: 0;
+/*Shapes=============*/
+#shape1 {
+  position: relative;
+  grid-column: 4 / 6;
+  background-color: rgba(0, 0, 50, 1);
   width: 200px;
   height: 200px;
-  background:  rgba(0, 0, 50, 0.5);
   border-radius: 50%;
+  margin: 200px 0;
+  animation-name: shape1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: smooth;
+  transition: transform 0.7s;
 }
 
+#shape1:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+#shape2 {
+  position: relative;
+  grid-column: 1 / 2;
+  margin: 200px 100px;
+  background-color: rgba(0, 0, 50, 1);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  animation-name: shape2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: smooth;
+  transition: transform 0.7s;
+}
+
+#shape2:hover {
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+
 #triangle-topright {
+  position: relative;
   grid-column: 3 / 6;
   width: 0;
   height: 0;
-  border-top: 200px solid rgba(0, 0, 50, 0.5);
+  border-top: 200px solid rgba(0, 0, 50, 1);
   border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
   margin: 200px 40px;
+  animation-name: topright;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: smooth;
 }
 
+
+/*Shape Animations=====*/
+@keyframes shape1 {
+  0%  {background-color: rgba(0, 0, 50, 1); left: 0px; top: 0px;}
+  50% {background-color: rgba(0, 0, 50, 0.8); left: 140px; top:0px;}
+  75% {background-color: rgba(0, 0, 50, 0.6); left: 140px; top: 140px;}
+  100%{background-color: rgba(0, 0, 50, 1); left: 0px; top: 0px;}
+}
+
+@keyframes shape2 {
+  0%   {background-color: rgba(0, 0, 50, 0.4); right: 0px; bottom: 0px;}
+  50%  {background-color: rgba(0, 0, 50, 1); right: 40px; bottom: 40px;}
+  100% {background-color: rgba(0, 0, 50, 0.4); right: 0px; bottom: 0px;}
+}
+
+@keyframes circle {
+  0%   {background:rgba(0, 0, 50, 0.6); left: 0px; top: 0px;}
+  50%  {background:rgba(0, 0, 50, 0.8); left: 0px; top: 140px;}
+  100% {background:rgba(0, 0, 50, 1); left: 0px; top: 0px;}
+}
+
+
+
+
+/*Download button====*/
 .downloadLink {
   display: block;
   grid-column:  4 / 6;
   width: 600px;
   text-decoration: none;
   text-align: center;
-  background-color: rgba(0, 0, 50, 0.5);
+  background-color: rgba(0, 0, 50, 1);
   color: #ffffff;
   padding: 40px;
-  border: 1px solid rgba(0, 0, 50, 0.5);
+  border: 1px solid rgba(0, 0, 50, 1);
   border-radius: 10px;
   margin: 200px auto;
   opacity: 1;
@@ -237,7 +305,7 @@ section {
 .downloadLink:hover {
   transform: scale(1.2);
   background-color: #ededed;
-  color: rgba(0, 0, 50, 0.5);
+  color: rgba(0, 0, 50, 1);
 }
 
 h2 {
