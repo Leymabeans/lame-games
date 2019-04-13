@@ -31,31 +31,32 @@
 
 
 <!--Nav Bar==========================================================-->
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox"/>
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <a class="pages" href="./index.htm">
-            <li>Home</li>
-          </a>
-          <a class="pages" href="./leaderboard.php">
-            <li>Leaderboard</li>
-          </a>
-          <a class="pages" href="../LoginSystem/lor.php">
-            <li>Profile</li>
-          </a>
-        </ul>
-      </div>
-    </nav>
+    <div class="header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a class="pages" href="./index.htm">
+              <li>Home</li>
+            </a>
+            <a class="pages" href="./leaderboard.php">
+              <li>Leaderboard</li>
+            </a>
+            <a class="pages" href="../LoginSystem/lor.php">
+              <li>Profile</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
     
 
 
   <!--Game Leaderboard 1========================================================= --> 
-    <div class="leaderboard"> 
-      <a name="bottom"></a>
+    <div class="leaderboard first"> 
       <h2 class="gametitle" >Cross Country Collin</h2><br>
       <table>
         <thead>
