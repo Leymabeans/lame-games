@@ -1,4 +1,4 @@
- <!--Meta Data======================================================= -->
+<!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,8 +24,10 @@
       <div class="signup">
         <h1>Sign Up</h1>
         <form method="post" action="signup.php">
+          <input class="input" type="text" name="firstname" autocomplete="new-password" placeholder="First Name" required><br>
+          <input class="input" type="text" name="lastname" autocomplete="new-password" placeholder="Last Name" required><br><br>
           <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username" required><br>
-          <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required><br>
+          <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required pattern=".{5,}"" title="Password must be at least 5 characters"><br>
           <input type="submit" value="Sign Up">
         </form>
       </div>
@@ -34,7 +36,7 @@
         <h1>Login</h1>
         <form method="post" action="login.php">
           <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username" required><br>
-          <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required><br>
+          <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required pattern=".{5,}"" title="Password must be at least 5 characters"><br>
           <input type="submit" value="Login">
         </form>
       </div>
