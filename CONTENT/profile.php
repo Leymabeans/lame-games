@@ -38,32 +38,47 @@
 
 
 <!--Nav Bar==========================================================-->
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox"/>
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <a class="pages" href="./index.htm">
-            <li>Home</li>
-          </a>
-          <a class="pages" href="./leaderboard.php">
-            <li>Leaderboard</li>
-          </a>
-          <a class="pages" href="./profile.php">
-            <li>Profile</li>
-          </a>
-        </ul>
-      </div>
-    </nav>
+    <div class="header">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a class="pages" href="./index.htm">
+              <li>Home</li>
+            </a>
+            <a class="pages" href="./leaderboard.php">
+              <li>Leaderboard</li>
+            </a>
+            <a class="pages" href="./profile.php">
+              <li>Profile</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <a class="logout" href="../LoginSystem/logout.php">Logout</a>
+    </div>
 
-    <h2>Registration Successful!</h2>
-    <a href="../LoginSystem/logout.php">Logout</a>
+
+
+<!--Profile=======================================================-->
+    <div class="profile">
+
+    </div>
+
+    <div class="edit">
+      <button>Edit Profile</button>
+      <form action="../Profile/upload.php" method="post">
+        <input type="file" name="pic" value="Edit Profile Image">
+        <input type="submit" value="Save Changes">
+      </form>
+    </div>
 
     
 <!--Footer========================================================-->
-<footer>
+    <footer>
       <br><br><br>
       <a href="https://github.com/nathanleysgit" target="_blank">
         <i class="fab fa-github fa-3x"></i>
