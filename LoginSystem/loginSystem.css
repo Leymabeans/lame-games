@@ -25,7 +25,7 @@ body {
 
 
 
-/*Login======================================*/
+/*Login and SignUp======================================*/
 .signup {
   grid-column: 1 / 2; 
   text-align: center;
@@ -56,7 +56,7 @@ h1, h2 {
 
 .input {
   text-align: center;
-  min-width: 200px;
+  min-width: 300px;
   max-width: 500px;
   border: none;
   border-radius: 5px;
@@ -72,7 +72,7 @@ input[type="submit"] {
   transition: opacity 0.4s;
   background-color: #ffffff;
   text-align: center;
-  width: 90px;
+  width: 120px;
   border: none;
   border-radius: 3px;
   padding: 5px 15px;
@@ -82,4 +82,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+
+/*Registration Success================================*/
+.none {
+  background: #ededed !important;
+}
+
+.registration {
+  color: rgba(46, 116, 247, 0.5);
+  margin: 20px auto;
+  text-align: center;
+  font-family: 'Chicle', cursive;
+  font-size: 30px;
 }
