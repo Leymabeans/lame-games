@@ -1,48 +1,49 @@
 <!--Processing for login system=======================================-->
 <?php
-//1 Start the session
-session_start();
+  //1 Start the session
+  session_start();
 
 
-//2 Set variables 
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$username = $_POST['username'];
-$password = $_POST['password'];
-$host = "localhost";
-$account = "root";
-$pass = "root";
-$database = "z_lamegames";
+  //2 Set variables 
+  $firstname = $_POST['firstname'];
+  $lastname = $_POST['lastname'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $host = "localhost";
+  $account = "root";
+  $pass = "root";
+  $database = "z_lamegames";
 
 
-//3 Connect to PhpMyAdmin
-$db = mysqli_connect($host, $account, $pass, $database);
-if ($db === false ) {
-  die("Error: Could not connect to the database");
-}
-else { 
+  //3 Connect to PhpMyAdmin
+  $db = mysqli_connect($host, $account, $pass, $database);
+  if ($db === false ) {
+    die("Error: Could not connect to the database");
+  }
+
   //4 Query information from lamegames database
-  $query = "SELECT * FROM useraccount WHERE Username='$username'";
-  $result = mysqli_query($db, $query);  
+  else { 
+    $query = "SELECT * FROM useraccount WHERE Username='$username'";
+    $result = mysqli_query($db, $query);  
 
-  //5 Check if username is already taken
-  $num = mysqli_num_rows($result);
-  if ($num == 1) {
-    die("Error: Username already taken");
-    header('Location: ./lor.php');
+    //5 Check if username is already taken
+    $num = mysqli_num_rows($result);
+    if ($num == 1) {
+      die("Error: Username already taken");
+      header('Location: ./lor.php');
+    }
+    
+    //6 Insert information into PhpMyAdmin
+    else {
+    $registration = "INSERT INTO useraccount VALUES ('$firstname', '$lastname', '$username', '$password')";
+    mysqli_query($db, $registration);
+    $_SESSION['username'] = $username;
+    header('Location: ./registrationSuccess.php');
+    }
   }
-  
-  //6 Insert information into PhpMyAdmin
-  else {
-  $registration = "INSERT INTO useraccount VALUES ('$firstname', '$lastname', '$username', '$password')";
-  mysqli_query($db, $registration);
-  $_SESSION['username'] = $username;
-  header('Location: ./registrationSuccess.php');
-  }
-}
 
-//9 Close connection to MySQL database
-mysqli_close($db);
+  //7 Close connection to MySQL database
+  mysqli_close($db);
 
 ?>
 
