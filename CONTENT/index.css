@@ -407,6 +407,35 @@ tr {
 
 
 /*Profile========================================*/
+.headerSpace {
+  margin-bottom: 100px;
+}
+
+.profile {
+  width: 100%;
+}
+
+.profilePic {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 5px auto;
+}
+
+form input, button {
+  display: block;
+  background-color: rgba(21, 7, 43, 1);
+  color: #ffffff;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .logout {
   float: right;
   text-decoration: none;

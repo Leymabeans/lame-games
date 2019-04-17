@@ -1,8 +1,11 @@
+<!--Processing for showing user profiles==========================-->
 <?php
+  //1 Start session and check for key
   session_start();
   if(!isset($_SESSION['username'])){
-    header("Location: ../LoginSystem/login.php");
+    header("Location: ../LoginSystem/lor.php");
   }
+
 ?>
 
 <!--Meta Data======================================================= -->
@@ -38,7 +41,7 @@
 
 
 <!--Nav Bar==========================================================-->
-    <div class="header">
+    <div class="header headerSpace">
       <nav role="navigation">
         <div id="menuToggle">
           <input type="checkbox"/>
@@ -64,15 +67,18 @@
 
 
 <!--Profile=======================================================-->
+    
     <div class="profile">
-
+      <a href="#edit">
+        <button>Edit Profile</button>
+      </a>
+      <img class="profilePic" src="../MISC/ocean.jpg">
     </div>
 
-    <div class="edit">
-      <button>Edit Profile</button>
+    <div class="edit" id="edit">
       <form action="../Profile/upload.php" method="post">
-        <input type="file" name="pic" value="Edit Profile Image">
-        <input type="submit" value="Save Changes">
+        <input class="edit" type="file" name="pic" value="Edit Profile Image">
+        <input class="choose" type="submit" value="Save Changes">
       </form>
     </div>
 
