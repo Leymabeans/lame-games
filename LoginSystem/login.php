@@ -2,7 +2,7 @@
 <?php
   //1 Start the session
   session_start();
-
+  
 
   //2 Set variables
   $username = $_POST['username'];
@@ -13,25 +13,25 @@
   $database = "z_lamegames";
   
 
-
   //3 Connect to PhpMyAdmin
   $db = mysqli_connect($host, $account, $pass, $database);
   if ($db === false ) {
     die("Error: Could not connect to the database");
   }
+
+  //4 Query information from lamegames database
   else {
-    //4 Query information from lamegames database
     $query = "SELECT * FROM useraccount WHERE Username='$username'&& Password='$password'";
     $result = mysqli_query($db, $query);
 
-    //6 If credentials match, show their profile
+    //5 If credentials match, show their profile
     $num = mysqli_num_rows($result);
     if ($num == 1) {
       $_SESSION['username'] = $username;
-      header("Location: ../CONTENT/profile.php");
+      header('Location: ./loginSuccess.php');
     }
 
-    //7 If credentials do not match, bring user back to login
+    //6 If credentials do not match, bring user back to login
     else {
       die("Error: Incorrect Credentials");
       header("Location: lor.php");
@@ -39,7 +39,7 @@
   }
 
   
-  //8 Close connection to MySQL database
+  //7 Close connection to MySQL database
   mysqli_close($db);
 ?>
 
