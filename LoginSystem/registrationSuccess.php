@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  $y = $_SESSION['username'];
+  header('Refresh: 1; URL=../CONTENT/profile.php?'.$y);
+
+?>
+
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,14 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="./loginSystem.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
-    <script>
-      if(1 == 1) {
-        window.setTimeout(function(){
-        window.location.href = "../CONTENT/Profile.php";
-
-        }, 500);
-      }
-    </script>
   </head>
 
   <body class="none">
