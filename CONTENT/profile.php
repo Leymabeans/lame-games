@@ -2,10 +2,31 @@
 <?php
   //1 Start session and check for key
   session_start();
+  $y = $_SESSION['username'];
   if(!isset($_SESSION['username'])){
     header("Location: ../LoginSystem/lor.php");
   }
 
+
+  //2 Set variables
+  $host = "localhost";
+  $account = "root";
+  $pass = "root";
+  $database = "z_lamegames";
+
+
+  //3 Connect to PhpMyAdmin
+  $db = mysqli_connect($host, $account, $pass, $database);
+  if ($db === false ) {
+    die("Error: Could not connect to the database");
+  }
+  
+
+  //4 Query information from database
+  $query = "SELECT * FROM useraccount WHERE Username='$y'";
+  $result = mysqli_query($db, $query);  
+
+  
 ?>
 
 <!--Meta Data======================================================= -->
@@ -67,19 +88,14 @@
 
 
 <!--Profile=======================================================-->
-    
     <div class="profile">
-      <a href="#edit">
-        <button>Edit Profile</button>
-      </a>
       <img class="profilePic" src="../MISC/ocean.jpg">
-    </div>
-
-    <div class="edit" id="edit">
-      <form action="../Profile/upload.php" method="post">
-        <input class="edit" type="file" name="pic" value="Edit Profile Image">
-        <input class="choose" type="submit" value="Save Changes">
-      </form>
+      <label class="editBtn">
+        <input type="file" name="pic" action="../Profile/upload.php" >
+        Change Profile Image
+      </label>
+      <h2>Nathan Ley</h2>
+      <h3>(Admin)</h3>
     </div>
 
     
