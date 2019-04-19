@@ -7,9 +7,6 @@
   //2 Set variables
   $username = $_POST['username'];
   $password = $_POST['password'];
-    
-
-  //2 Connect to PhpMyAdmin database
   $host = "localhost";
   $account = "root";
   $pass = "root";
