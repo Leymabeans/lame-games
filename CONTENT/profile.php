@@ -2,11 +2,9 @@
 <?php
   //1 Start session and check for key
   session_start();
-  $y = $_SESSION['username'];
   if(!isset($_SESSION['username'])){
     header("Location: ../LoginSystem/lor.php");
   }
-
 
   //2 Set variables
   $host = "localhost";
@@ -23,7 +21,7 @@
   
 
   //4 Query information from database
-  $query = "SELECT * FROM useraccount WHERE Username='$y'";
+  $query = "SELECT * FROM useraccount WHERE Username='$username'";
   $result = mysqli_query($db, $query);  
 
   
@@ -45,7 +43,7 @@
       var myVar;
 
       function myFunction() {
-        myVar = setTimeout(showPage, 1500);
+        myVar = setTimeout(showPage, 1000);
       }   
       function showPage() {
         document.getElementById("loader").style.display = "none";
@@ -89,13 +87,16 @@
 
 <!--Profile=======================================================-->
     <div class="profile">
-      <img class="profilePic" src="../MISC/ocean.jpg">
-      <label class="editBtn">
-        <input type="file" name="pic" action="../Profile/upload.php" >
-        Change Profile Image
-      </label>
-      <h2>Nathan Ley</h2>
-      <h3>(Admin)</h3>
+      <img class="profilePic" src="">
+      <form action="../Profile/upload.php" method="post" enctype="multipart/form-data">
+        
+
+        <div>
+          <input type="submit" name="upload" value="Save Changes">
+        </div>
+      </form>
+      
+      <h3><?php echo '(' . $username . ')'?></h3>
     </div>
 
     
