@@ -1,6 +1,6 @@
 <?php
   session_start();
-  header('Refresh: 1; URL=../CONTENT/profile.php?' . $username);
+  header('Refresh: 1; URL=../CONTENT/profile.php?' . $_SESSION['username']);
 
 ?>
 
@@ -20,7 +20,7 @@
 
   <body class="none">
     <h2 class="registration">Registration Successful!</h2><br>
-    <h3 class="registration">Creating Profile...</h3>
+    <h4 class="registration">Creating Profile...</h4>
   </body>
 
 

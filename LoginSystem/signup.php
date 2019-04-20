@@ -9,7 +9,7 @@
   $lastname = $_POST['lastname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $image = $_POST['image']['name'];
+  $image = $_POST['image'];
   $host = "localhost";
   $account = "root";
   $pass = "root";
@@ -34,11 +34,14 @@
       header('Location: ./lor.php');
     }
     
-    //6 Insert information into PhpMyAdmin
+    //6 Otherwise insert information into PhpMyAdmin
     else {
     $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password, Image) VALUES ('$firstname', '$lastname', '$username', '$password', '$image')";
     mysqli_query($db, $registration);
     $_SESSION['username'] = $username;
+    $_SESSION['firstname'] = $firstname;
+    $_SESSION['lastname'] = $lastname;
+    $_SESSION['image'] = $image;
     header('Location: ./registrationSuccess.php');
     }
   }
