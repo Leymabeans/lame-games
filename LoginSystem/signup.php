@@ -9,6 +9,7 @@
   $lastname = $_POST['lastname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
+  $image = $_POST['image']['name'];
   $host = "localhost";
   $account = "root";
   $pass = "root";
@@ -35,11 +36,9 @@
     
     //6 Insert information into PhpMyAdmin
     else {
-    $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password) VALUES ('$firstname', '$lastname', '$username', '$password')";
+    $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password, Image) VALUES ('$firstname', '$lastname', '$username', '$password', '$image')";
     mysqli_query($db, $registration);
-    $_SESSION['username'] = $x;
-    $_SESSION['firstname'] = $y;
-    $_SESSION['lastname'] = $z;
+    $_SESSION['username'] = $username;
     header('Location: ./registrationSuccess.php');
     }
   }
@@ -50,7 +49,7 @@
 ?>
 
 <!--Meta Data======================================================= -->
-<!DOCTYPE html>s
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Sign Up</title>

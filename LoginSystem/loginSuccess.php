@@ -1,7 +1,6 @@
 <?php
   session_start();
-  $y = $_SESSION['username'];
-  header('Refresh: 1; URL=../CONTENT/profile.php?'.$y);
+  header('Refresh: 1; URL=../CONTENT/profile.php?'. $username);
 
 ?>
 
