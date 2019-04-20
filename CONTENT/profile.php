@@ -19,11 +19,11 @@
     die("Error: Could not connect to the database");
   }
   
-
+/*
   //4 Query information from database
   $query = "SELECT * FROM useraccount WHERE Username='$username'";
   $result = mysqli_query($db, $query);  
-
+*/
   
 ?>
 
@@ -87,16 +87,9 @@
 
 <!--Profile=======================================================-->
     <div class="profile">
-      <img class="profilePic" src="">
-      <form action="../Profile/upload.php" method="post" enctype="multipart/form-data">
-        
-
-        <div>
-          <input type="submit" name="upload" value="Save Changes">
-        </div>
-      </form>
-      
-      <h3><?php echo '(' . $username . ')'?></h3>
+      <img class="profilePic" src="<?php echo $_SESSION['image'] ?>">
+      <h2> <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname'] ?> <h2>
+      <h3> <?php echo '(' . $_SESSION['username'] . ')'?> </h3>
     </div>
 
     
