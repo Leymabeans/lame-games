@@ -88,7 +88,7 @@ input:focus {
   cursor: pointer;
 }
 
-.editBtn [type=file] {
+.editBtn [type=url] {
   cursor: inherit;
   display: block;
   font-size: 13px;

@@ -24,13 +24,13 @@
     <div class="grid-container">  
       <div class="signup">
         <h1>Sign Up</h1>
-        <form method="post" action="signup.php"enctype="multipart/form-data">
+        <form method="post" action="signup.php" enctype="multipart/fprm-data">
           <input class="input" type="text" name="firstname" autocomplete="new-password" placeholder="First Name" required><br>
           <input class="input" type="text" name="lastname" autocomplete="new-password" placeholder="Last Name" required><br><br>
           <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username" required><br>
           <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required pattern=".{5,}"" title="Password must be at least 5 characters"><br>
           <div class="editBtn">
-            <input type="file" name="image">
+            <input type="url" name="image">
             Add Profile Image
           </div>
           <input type="submit" value="Sign Up">
