@@ -5,6 +5,8 @@
   
 
   //2 Set variables
+  $firstname = $_POST['firstname'];
+  $lastname = $_POST['lastname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
   $host = "localhost";
@@ -28,6 +30,8 @@
     $num = mysqli_num_rows($result);
     if ($num == 1) {
       $_SESSION['username'] = $username;
+      $_SESSION['firstname'] = $firstname;
+      $_SESSION['lastname'] = $lastname;
       header('Location: ./loginSuccess.php');
     }
 

@@ -35,9 +35,11 @@
     
     //6 Insert information into PhpMyAdmin
     else {
-    $registration = "INSERT INTO useraccount VALUES ('$firstname', '$lastname', '$username', '$password')";
+    $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password) VALUES ('$firstname', '$lastname', '$username', '$password')";
     mysqli_query($db, $registration);
-    $_SESSION['username'] = $username;
+    $_SESSION['username'] = $x;
+    $_SESSION['firstname'] = $y;
+    $_SESSION['lastname'] = $z;
     header('Location: ./registrationSuccess.php');
     }
   }
