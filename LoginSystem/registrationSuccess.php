@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Success</title>
+    <title>Registration Success</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../MISC/LGLogo.ico" rel="shortcut icon">
@@ -18,7 +18,7 @@
 
   <body class="none">
     <h2 class="registration">Registration Successful!</h2><br>
-    <h4 class="registration">Creating Profile...</h4>
+    <p class="registration">Creating Profile...</p>
   </body>
 
 
