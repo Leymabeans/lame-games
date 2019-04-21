@@ -1,3 +1,9 @@
+<?php
+  //1 Start session and check for key
+  session_start();
+
+?>
+
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +20,7 @@
       var myVar;
 
       function myFunction() {
-        myVar = setTimeout(showPage, 1500);
+        myVar = setTimeout(showPage, 500);
       }   
       function showPage() {
         document.getElementById("loader").style.display = "none";
@@ -45,7 +51,7 @@
             <a class="pages" href="./leaderboard.php">
               <li>Leaderboard</li>
             </a>
-            <a class="pages" href="../LoginSystem/lor.php">
+            <a class="pages" href="./profile.php?". <?php $_SESSION['username'] ?>>
               <li>Profile</li>
             </a>
           </ul>
