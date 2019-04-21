@@ -1,6 +1,6 @@
 <?php
   session_start();
-  header('Refresh: 1; URL=../CONTENT/profile.php?' . $_SESSION['username']);
+  header('Refresh: 1; URL=../Content/profile.php?' . $_SESSION['username']);
 
 ?>
 
@@ -11,7 +11,7 @@
     <title>Registration Success</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../MISC/LGLogo.ico" rel="shortcut icon">
+    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="./loginSystem.css" rel="stylesheet" type="text/css">
   </head>

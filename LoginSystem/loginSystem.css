@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("../MISC/ocean.jpg");
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("../Miscellaneous/ocean.jpg");
   background-size: cover;
   background-position: center;
   font-family: 'Open Sans', sans-serif;
@@ -62,7 +62,7 @@ input:focus {
   outline: 0;
 }
 
-.profilepic {
+.addpic {
   display: block;
   overflow: hidden;
   position: relative;
@@ -77,11 +77,11 @@ input:focus {
   margin: 10px auto;
 }
  
-.profilepic:hover {
+.addpic:hover {
   cursor: pointer;
 }
 
-.profilepic [type=url] {
+.addpic [type=url] {
   cursor: inherit;
   display: block;
   font-size: 13px;

@@ -6,7 +6,7 @@
     <title>Login or Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../MISC/LGLogo.ico" rel="shortcut icon">
+    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
     <link href="./loginSystem.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@
           <input class="input" type="text" name="lastname" autocomplete="new-password" placeholder="Last Name" required><br><br>
           <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username" required><br>
           <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required pattern=".{5,}"" title="Password must be at least 5 characters"><br>
-          <div class="profilepic">
+          <div class="addpic">
             <input type="url" name="image">
             Add Profile Image
           </div>
