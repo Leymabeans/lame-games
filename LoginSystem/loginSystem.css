@@ -35,7 +35,6 @@ body {
   margin: 250px 20px;
 }
 
-
 .login {
   grid-column: 2 / 3; 
   text-align: center;
@@ -45,13 +44,8 @@ body {
   margin: 250px 20px;
 }
 
-
 h1, h2 {
   color: #ffffff;
-}
-
-.or {
-  margin-top: 200px;
 }
 
 .input {
@@ -68,8 +62,7 @@ input:focus {
   outline: 0;
 }
 
-
-.editBtn {
+.profilepic {
   display: block;
   overflow: hidden;
   position: relative;
@@ -84,11 +77,11 @@ input:focus {
   margin: 10px auto;
 }
  
-.editBtn:hover {
+.profilepic:hover {
   cursor: pointer;
 }
 
-.editBtn [type=url] {
+.profilepic [type=url] {
   cursor: inherit;
   display: block;
   font-size: 13px;
@@ -120,7 +113,7 @@ input[type="submit"]:hover {
 }
 
 
-/*Registration Success================================*/
+/*Registration and Login Success================================*/
 .none {
   background: #ededed !important;
 }
