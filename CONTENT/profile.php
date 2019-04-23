@@ -89,10 +89,35 @@
 
 <!--Profile=======================================================-->
     <div class="profile">
-      <img class="profilePic" src="<?php echo $_SESSION['image'] ?>">
-      <h2> <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname'] ?> <h2>
-      <h3> <?php echo '(' . $_SESSION['username'] . ')'?> </h3>
+      <div class="layerup">
+        <div class="contentlayer">
+          <button class="editBio"><a href="../edit/profileEdit.php">Add to Profile</a></button>
+          <img class="profilePic" src="<?php echo $_SESSION['image'] ?>">
+          <h2> <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname'] ?> <h2>
+          <h3> <?php echo '(' . $_SESSION['username'] . ')'?> </h3>
+        </div>
+      </div>
     </div>
+
+
+<!--Global Rankings===============================================-->
+    <div class="layerup">
+      <div class="contentlayer">
+        <h2 class="global">Global Rankings</h2>
+        <div class="personalScore">
+          <h3>Cross Country Collin</h3>
+          <p>Rank: N/A</p>
+          <p>Score: N/A</p>
+        </div>
+
+        <div class="personalScore">
+          <h3>Escape Game</h3>
+          <p>Rank: N/A</p>
+          <p>Score: N/A</p>
+        </div>
+      </div>
+    </div>
+    
 
     
 <!--Footer========================================================-->
