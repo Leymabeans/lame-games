@@ -50,7 +50,7 @@
             <a class="pages" href="./leaderboard.php">
               <li>Leaderboard</li>
             </a>
-            <a class="pages" href="./profile.php?<?php echo $_SESSION['username'] ?>">
+            <a class="pages" href="../LoginSystem/lor.php">
               <li>Profile</li>
             </a>
           </ul>
