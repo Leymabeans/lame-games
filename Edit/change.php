@@ -26,7 +26,7 @@
       echo mysqli_error($db);
     }
     else {
-      header("Location: ../Content/profile.php");
+      header("Location: ./editSuccess.php");
     }
   }
 
