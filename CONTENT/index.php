@@ -118,7 +118,7 @@
       <div id="shape3">
         </div>
     </div>
-      <a href="#" class="downloadLink space">Coming Soon!</a>
+      <a href="#" class="downloadLink space">Games Coming Soon!</a>
 
 
 
