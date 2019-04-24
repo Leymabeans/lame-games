@@ -104,16 +104,17 @@
     <div class="layerup">
       <div class="contentlayer">
         <h2 class="global">Global Rankings</h2>
+
         <div class="personalScore">
           <h3>Cross Country Collin</h3>
-          <p>Rank: N/A</p>
-          <p>Score: N/A</p>
+          <p>Rank: </p>
+          <p>Score: </p>
         </div>
 
         <div class="personalScore">
           <h3>Escape Game</h3>
-          <p>Rank: N/A</p>
-          <p>Score: N/A</p>
+          <p>Rank: </p>
+          <p>Score: </p>
         </div>
       </div>
     </div>
