@@ -29,10 +29,6 @@
           <input class="input" type="text" name="lastname" autocomplete="new-password" placeholder="Last Name" required><br><br>
           <input class="input" type="text" name="username" autocomplete="new-password" placeholder="Username" required><br>
           <input class="input" type="password" name="password" autocomplete="new-password" placeholder="Password" required pattern=".{5,}"" title="Password must be at least 5 characters"><br>
-          <div class="addpic">
-            <input type="url" name="image">
-            Add Profile Image
-          </div>
           <input type="submit" value="Sign Up">
         </form>
       </div>
