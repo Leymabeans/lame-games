@@ -9,7 +9,6 @@
   $lastname = $_POST['lastname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $image = $_POST['image'];
   $host = "localhost";
   $account = "root";
   $pass = "root";
@@ -36,7 +35,7 @@
     
     //6 Otherwise insert information into PhpMyAdmin
     else {
-    $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password, Image) VALUES ('$firstname', '$lastname', '$username', '$password', '$image')";
+    $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password, Image, Bio) VALUES ('$firstname', '$lastname', '$username', '$password', '', '')";
     mysqli_query($db, $registration);
     $_SESSION['username'] = $username;
     $_SESSION['firstname'] = $firstname;
