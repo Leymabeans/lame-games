@@ -422,7 +422,7 @@ tr {
   background-size: cover;
   background-position: center;
   width: 700px;
-  height: 700px;
+  height: 850px;
   padding: 5px;
   border-radius: 15px;
   margin: 5px auto 100px auto;
@@ -431,7 +431,7 @@ tr {
 .contentlayer {
   background-color: #ffffff;
   width: 650px;
-  height: 650px;
+  height: 800px;
   padding: 5px;
   border-radius: 15px;
   margin: 25px auto 5px auto;
@@ -463,6 +463,11 @@ tr {
 .editBio a {
   text-decoration: none;
   color: #ffffff;
+}
+
+.biosection {
+  margin: 20px auto;
+  width: 300px;
 }
 
 .global {
