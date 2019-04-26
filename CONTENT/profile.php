@@ -19,12 +19,14 @@
     die("Error: Could not connect to the database");
   }
   
-/*
-  //4 Query information from database
-  $query = "SELECT * FROM useraccount WHERE Username='$username'";
-  $result = mysqli_query($db, $query);  
-*/
-  
+  //4 Retrieve all information from database for user
+  else {
+    $query = mysqli_query($db, "SELECT FirstName, LastName, Username, Image, Bio FROM useraccount WHERE Username ='" . $_SESSION['username'] . "'");  
+    $result = mysqli_fetch_array($query);
+    }
+    // Close connection to MySQL database
+    mysqli_close($db);
+    
 ?>
 
 <!--Meta Data======================================================= -->
@@ -84,17 +86,18 @@
         <a class="logout" href="../LoginSystem/logout.php">Logout</a>
       </div>
     </div>
-
+ 
 
 
 <!--Profile=======================================================-->
     <div class="profile">
       <div class="layerup">
         <div class="contentlayer">
-          <button class="editBio"><a href="../edit/profileEdit.php">Add to Profile</a></button>
-          <img class="profilePic" src="<?php echo $_SESSION['image'] ?>">
-          <h2> <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname'] ?> <h2>
-          <h3> <?php echo '(' . $_SESSION['username'] . ')'?> </h3>
+          <button class="editBio"><a href="../edit/profileEdit.php">Edit Profile</a></button>
+          <img class="profilePic" src="<?php echo $result['Image'] ?>">
+          <h2><?php echo $result['FirstName'] . " " . $result['LastName']?></h2>
+          <h3><?php echo "(" . $result['Username'] . ")"?><h3>
+          <p class="biosection"> <?php echo $result['Bio'] ?> </p>
         </div>
       </div>
     </div>
