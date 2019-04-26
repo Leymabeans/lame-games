@@ -30,8 +30,6 @@
     $num = mysqli_num_rows($result);
     if ($num == 1) {
       $_SESSION['username'] = $username;
-      $_SESSION['firstname'] = $firstname;
-      $_SESSION['lastname'] = $lastname;
       header('Location: ./loginSuccess.php');
     }
 

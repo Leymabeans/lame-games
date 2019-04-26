@@ -38,9 +38,6 @@
     $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password, Image, Bio) VALUES ('$firstname', '$lastname', '$username', '$password', '', '')";
     mysqli_query($db, $registration);
     $_SESSION['username'] = $username;
-    $_SESSION['firstname'] = $firstname;
-    $_SESSION['lastname'] = $lastname;
-    $_SESSION['image'] = $image;
     header('Location: ./registrationSuccess.php');
     }
   }
