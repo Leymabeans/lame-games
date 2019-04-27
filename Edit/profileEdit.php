@@ -26,9 +26,9 @@
     <div class="profileEdit">
       <h2>Edit Profile</h2>
       <form class="bioAdd" action="./change.php" method="post"> 
-        <input type="text" name="bio" placeholder="Add Bio"><br>
+        <input type="text" name="bio" maxlength="200" placeholder="Add Bio"><br>
         <div class="addpic">
-            <input type="url" name="image" placeholder="Add Profile URL">
+            <input type="url" name="image" placeholder="Photo URL">
             
           </div>
         <input type="submit" value="Submit">

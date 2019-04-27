@@ -93,7 +93,7 @@
     <div class="profile">
       <div class="layerup">
         <div class="contentlayer">
-          <button class="editBio"><a href="../edit/profileEdit.php">Edit Profile</a></button>
+        <a href="../edit/profileEdit.php"><button class="editBio"> Edit Profile</button></a>
           <img class="profilePic" src="<?php echo $result['Image'] ?>">
           <h2><?php echo $result['FirstName'] . " " . $result['LastName']?></h2>
           <h3><?php echo "(" . $result['Username'] . ")"?><h3>
