@@ -75,27 +75,27 @@
         <tbody>
           <tr>
             <td>#1</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#2</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#3</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#4</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#5</td>
-            <td></td>
+            <td><?php ?></td>
             <td></td>
           </tr>
         </tbody>
@@ -120,28 +120,28 @@
         <tbody>
           <tr>
             <td>#1</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#2</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#3</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#4</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
           <tr>
             <td>#5</td>
-            <td></td>
-            <td></td>
+            <td><?php ?></td>
+            <td><?php ?></td>
           </tr>
         </tbody>
       </table> 
