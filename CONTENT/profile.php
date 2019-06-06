@@ -10,7 +10,7 @@
   $host = "localhost";
   $account = "root";
   $pass = "root";
-  $database = "z_lamegames";
+  $database = "y";
 
 
   //3 Connect to PhpMyAdmin
