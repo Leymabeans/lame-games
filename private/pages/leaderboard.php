@@ -10,10 +10,10 @@
     <title>Leaderboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
+    <link href="../../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./index.css" rel="stylesheet" type="text/css">
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
     <script>
       var myVar;
@@ -44,13 +44,13 @@
           <span></span>
           <span></span>
           <ul id="menu">
-            <a class="pages" href="./index.php">
+            <a class="pages" href="../../index.php">
               <li>Home</li>
             </a>
             <a class="pages" href="./leaderboard.php">
               <li>Leaderboard</li>
             </a>
-            <a class="pages" href="../LoginSystem/lor.php">
+            <a class="pages" href="../../login/lor.php">
               <li>Profile</li>
             </a>
           </ul>

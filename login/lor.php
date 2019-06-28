@@ -6,10 +6,10 @@
     <title>Login or Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./loginSystem.css" rel="stylesheet" type="text/css">
+    <link href="../css/login-system.css" rel="stylesheet" type="text/css">
   </head>
 
 

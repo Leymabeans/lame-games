@@ -11,8 +11,8 @@
   $password = $_POST['password'];
   $host = "localhost";
   $account = "root";
-  $pass = "root";
-  $database = "y";
+  $pass = "";
+  $database = "z_lamegames";
   
 
   //3 Connect to PhpMyAdmin
@@ -30,13 +30,13 @@
     $num = mysqli_num_rows($result);
     if ($num == 1) {
       $_SESSION['username'] = $username;
-      header('Location: ./loginSuccess.php');
+      header('Location: ./login-success.php');
     }
 
     //6 If credentials do not match, bring user back to login
     else {
       die("Error: Incorrect Credentials");
-      header("Location: lor.php");
+      header('Refresh: 0.7; URL= ./lor.php');
     }
   }
 
@@ -53,9 +53,9 @@
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./loginSystem.css" rel="stylesheet" type="text/css">
+    <link href=".c/css/login-system.css" rel="stylesheet" type="text/css">
   </head>
 

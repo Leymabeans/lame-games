@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("../Miscellaneous/ocean.jpg");
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("../images/ocean.jpg");
   background-size: cover;
   background-position: center;
   font-family: 'Open Sans', sans-serif;

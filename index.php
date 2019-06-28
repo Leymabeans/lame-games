@@ -11,10 +11,10 @@
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
+    <link href="./images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
-    <link href="./index.css" rel="stylesheet" type="text/css">
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
     <script>
       var myVar;
@@ -47,10 +47,10 @@
           <a class="pages" href="./index.php">
             <li>Home</li>
           </a>
-          <a class="pages" href="./leaderboard.php">
+          <a class="pages" href="./private/pages/leaderboard.php">
             <li>Leaderboard</li>
           </a>
-          <a class="pages" href="../LoginSystem/lor.php">
+          <a class="pages" href="./login/lor.php">
             <li>Profile</li>
           </a>
         </ul>
@@ -62,7 +62,7 @@
     
 <!--Banner======================================================-->
     <div class="container">
-        <img src="../Miscellaneous/setup.jpg">
+        <img src="./images/setup.jpg">
         <div class="text"> 
           <h1>Lame Games</h1>
           <p>Wasting time since '18</p>
@@ -135,7 +135,7 @@
       </a>
 
       <br>
-      <span> 2018 Lame Games.</span>
+      <span> 2018-2019 Lame Games. All rights reserved</span>
     </footer>  
   </body>
 </html>

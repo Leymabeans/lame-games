@@ -3,14 +3,14 @@
   //1 Start session and check for key
   session_start();
   if(!isset($_SESSION['username'])){
-    header("Location: ../LoginSystem/lor.php");
+    header("Location: ../../login/lor.php");
   }
 
   //2 Set variables
   $host = "localhost";
   $account = "root";
-  $pass = "root";
-  $database = "y";
+  $pass = "";
+  $database = "z_lamegames";
 
 
   //3 Connect to PhpMyAdmin
@@ -36,10 +36,10 @@
     <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
+    <link href="../../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./index.css" rel="stylesheet" type="text/css">
+    <link href="../../css/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
     <script>
       var myVar;
@@ -70,7 +70,7 @@
           <span></span>
           <span></span>
           <ul id="menu">
-            <a class="pages" href="./index.php">
+            <a class="pages" href="../../index.php">
               <li>Home</li>
             </a>
             <a class="pages" href="./leaderboard.php">
@@ -83,7 +83,7 @@
         </div>
       </nav>
       <div>
-        <a class="logout" href="../LoginSystem/logout.php">Logout</a>
+        <a class="logout" href="../../login/logout.php">Logout</a>
       </div>
     </div>
  
@@ -93,7 +93,7 @@
     <div class="profile">
       <div class="layerup">
         <div class="contentlayer">
-        <a href="../edit/profileEdit.php"><button class="editBio"> Edit Profile</button></a>
+        <a href="../edit/profile-edit.php"><button class="editBio"> Edit Profile</button></a>
           <img class="profilePic" src="<?php echo $result['Image'] ?>">
           <h2><?php echo $result['FirstName'] . " " . $result['LastName']?></h2>
           <h3><?php echo "(" . $result['Username'] . ")"?><h3>

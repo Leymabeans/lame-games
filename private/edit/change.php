@@ -8,8 +8,8 @@
   $bio = $_POST['bio'];
   $host = "localhost";
   $account = "root";
-  $pass = "root";
-  $database = "y";
+  $pass = "";
+  $database = "z_lamegames";
 
 
   //3 Connect to PhpMyAdmin
@@ -26,7 +26,7 @@
       echo mysqli_error($db);
     }
     else {
-      header("Location: ./editSuccess.php");
+      header("Location: ./edit-success.php");
     }
   }
 
@@ -38,10 +38,10 @@
     <title>Updating Profile...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
+    <link href="../../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./index.css" rel="stylesheet" type="text/css">
+    <link href="./../css/edit.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
   </head>
 
