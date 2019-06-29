@@ -21,8 +21,12 @@
   
   //4 Retrieve all information from database for user
   else {
-    $query = mysqli_query($db, "SELECT FirstName, LastName, Username, Image, Bio FROM useraccount WHERE Username ='" . $_SESSION['username'] . "'");  
+    $query = mysqli_query($db, "SELECT FirstName, LastName, Username, Image, Bio FROM users WHERE Username ='" . $_SESSION['username'] . "'");  
     $result = mysqli_fetch_array($query);
+    if (!$result) {
+      printf("Error: %s\n", mysqli_error($db));
+      exit();
+  }
     }
     // Close connection to MySQL database
     mysqli_close($db);

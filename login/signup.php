@@ -21,9 +21,9 @@
     die("Error: Could not connect to the database");
   }
 
-  //4 Query information from lamegames database
+  //4 Retrieve information from users table
   else { 
-    $query = "SELECT * FROM useraccount WHERE Username='$username'";
+    $query = "SELECT * FROM users WHERE Username='$username'";
     $result = mysqli_query($db, $query);  
 
     //5 Check if username is already taken
@@ -35,7 +35,7 @@
     
     //6 Otherwise insert information into PhpMyAdmin
     else {
-    $registration = "INSERT INTO useraccount (FirstName, LastName, Username, Password, Image, Bio) VALUES ('$firstname', '$lastname', '$username', '$password', '', '')";
+    $registration = "INSERT INTO users (FirstName, LastName, Username, Password, Image, Bio) VALUES ('$firstname', '$lastname', '$username', '$password', '', '')";
     mysqli_query($db, $registration);
     $_SESSION['username'] = $username;
     header('Location: ./signup-success.php');

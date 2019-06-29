@@ -23,7 +23,7 @@
 
   //4 Query information from lamegames database
   else {
-    $query = "SELECT * FROM useraccount WHERE Username='$username'&& Password='$password'";
+    $query = "SELECT * FROM users WHERE Username='$username'&& Password='$password'";
     $result = mysqli_query($db, $query);
 
     //5 If credentials match, show their profile
