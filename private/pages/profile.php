@@ -45,16 +45,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
     <link href="../../css/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
-    <script>
-      var myVar;
-
-      function myFunction() {
-        myVar = setTimeout(showPage, 500);
-      }   
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-      }
-    </script>
+    <script src="./js/index.js" type="text/javascript"></script>
   </head>
 
 
@@ -76,9 +67,6 @@
           <ul id="menu">
             <a class="pages" href="../../index.php">
               <li>Home</li>
-            </a>
-            <a class="pages" href="./leaderboard.php">
-              <li>Leaderboard</li>
             </a>
             <a class="pages" href="./profile.php?<?php echo $_SESSION['username'] ?>">
               <li>Profile</li>
