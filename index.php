@@ -1,9 +1,3 @@
-<?php
-  //1 Start session
-  session_start();
-?>
-
-
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -47,84 +41,17 @@
 
 
     
-<!--Banner======================================================-->
-    <div class="fling-minislide">
-        <img src="./private/images/setup.jpg"> 
-        <img src="./private/images/setup2.jpg">
-        <img src="./private/images/setup3.jpg">
-        <img src="./private/images/setup4.jpg">
-      </div>
-
-
-<!--Content========================================================= -->  
-    <div class="content">
-      <section id="about">
-      <div class="text"> 
-      <h1>Lame Games</h1>
-          <p>Wasting time since '18</p>
-        </div>
-        <h2>About</h2>
-        <p>Lame Games is an organization created by Nathan Ley and
-        Andrew Zweifel to bring programming and fun together. 
-        Lame Games offers fully developed games that can be played 
-        by the public, as well as a friendly game developing 
-        competition.</p>
-      </section>
-
-      <div id="shape1">
-      </div>
-
-      <div id="shape2">
-      </div>
-
-      <section class="competition">
-        <h2>The Competition</h2>
-        <p>The competition is a timed event in which both Nathan and Andrew 
-        must create the best game possible using the programming language,
-        Python. The reason behind the name "Lame Games" ,comes from the competition
-        where, under strict time limits, it is hard to create good games. The rules
-        for the game are as follows:</p> 
-        <br>
-        <div class= "list">
-          <ol>
-            <li>The time limit in the competition is 30 minutes</li>
-            <li>Competitors must start with a clean, empty file to begin</li>
-            <li>The language used to create the games must be Python</li>
-            <li>There can be no copying and pasting from past projects</li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="playgame">
-        <h2>Downloadable Games</h2>
-        <p>On the other hand, Lame Game creators make games outside of the competition and
-        these downloadable games have had much time and work put into. Players can create a 
-        free account and download our provided games. You can
-        also <a class="statCheck" href="./leaderboard.php">check your stats and comparisons to other players</a></p>
-        <br>
-      </section>
-
-      <div id="shape3">
-        </div>
+<!--Slideshow======================================================-->
+    <div class="slideshow">
+      <img src="./private/images/setup.jpg"> 
+      <img src="./private/images/setup2.jpg">
+      <img src="./private/images/setup3.jpg">
+      <img src="./private/images/setup4.jpg">
     </div>
-      <a href="#" class="downloadLink space">Games Coming Soon!</a>
 
-
-
-
-<!--Footer========================================================-->
-    <footer>
-      <br><br><br>
-      <a href="https://github.com/nathanleysgit" target="_blank">
-        <i class="fab fa-github fa-3x"></i>
-      </a>
-
-      <a href="https://www.youtube.com" target="_blank">
-        <i class=" free fas fa-tv fa-3x" style="color: #ffffff"></i>
-      </a>
-
-      <br>
-      <span> 2018-2019 Lame Games. All rights reserved</span>
-    </footer>  
+    <div class="text"> 
+      <h1>Lame Games</h1>
+      <p>Wasting time since '18</p>
+    </div>
   </body>
 </html>
