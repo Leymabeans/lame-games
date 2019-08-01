@@ -12,7 +12,6 @@ body {
 }
 
 h2 {
-  font-family: 'Chicle', cursive;
   font-size: 36px;
   color: rgba(21, 7, 43, 1);
   margin-bottom: none;
@@ -53,7 +52,7 @@ input[type="submit"]:hover {
 
 /*Edit Success==================================*/
 .successtext {
-  color: rgba(46, 116, 247, 0.5);
+  color: rgba(121, 2, 99, 0.6);
   margin: 20px auto;
   text-align: center;
   font-family: 'Chicle', cursive;
