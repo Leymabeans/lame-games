@@ -21,7 +21,7 @@ body {
   margin: 45vh auto;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  border-top: 8px solid rgba(21, 7, 43, 1);
+  border-top: 8px solid rgba(121, 2, 99, 0.6);
   width: 80px;
   height: 80px;
   animation: spin 1.5s linear infinite;

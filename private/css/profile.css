@@ -19,7 +19,7 @@ body {
   margin: 45vh auto;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  border-top: 8px solid rgba(21, 7, 43, 1);
+  border-top: 8px solid rgba(121, 2, 99, 0.6);
   width: 80px;
   height: 80px;
   animation: spin 1.5s linear infinite;
@@ -73,7 +73,7 @@ body {
 
 .editBio {
   display: block;
-  background-color: rgba(21, 7, 43, 1);
+  background-color: rgba(121, 2, 99, 0.6);
   color: #ffffff;
   width: 200px;
   padding: 8px 20px;
@@ -107,7 +107,7 @@ a {
   float: right;
   text-decoration: none;
   background-color: #ffffff;
-  color: rgba(21, 7, 43, 1);
+  color: rgba(121, 2, 99, 0.6);
   padding: 7px 18px;
   border-radius: 5px;
   margin: 0 20px 0 0;
