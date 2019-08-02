@@ -2,11 +2,11 @@
 <?php
   //1 Start the session
   session_start();
-  
+  header('Refresh: 1; URL=../pages/profile.php?' . $_SESSION['username']);
 
   //2 Set variables
-  $firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
+  $first_name = $_POST['firstname'];
+  $last_name = $_POST['lastname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
   $host = "localhost";
@@ -22,27 +22,28 @@
   }
 
   //4 Query information from lamegames database
-  else {
-    $query = "SELECT * FROM users WHERE Username='$username'&& Password='$password'";
-    $result = mysqli_query($db, $query);
+  $query = "SELECT * FROM users WHERE Username='$username'&& Password='$password'";
+  $result = mysqli_query($db, $query);
 
-    //5 If credentials match, show their profile
-    $num = mysqli_num_rows($result);
-    if ($num == 1) {
-      $_SESSION['username'] = $username;
-      header('Location: ./login-success.php');
-    }
+  //5 If credentials match, set username key
+  $num = mysqli_num_rows($result);
+  if ($num == 1) {
+    $_SESSION['username'] = $username;
 
-    //6 If credentials do not match, bring user back to login
-    else {
-      die("Error: Incorrect Credentials");
-      header('Refresh: 0.7; URL= ./lor.php');
-    }
+    //6 Close connection to MySQL database
+    mysqli_close($db);
   }
 
+  //7 If credentials do not match, bring user back to login
+  else {
+    die("Error: Incorrect Credentials");
+    
+    //8 Close connection to MySQL database
+    mysqli_close($db);
+    }
+
   
-  //7 Close connection to MySQL database
-  mysqli_close($db);
+  
 ?>
 
 
@@ -50,12 +51,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login</title>
+    <title>Logging In...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href=".c/css/login-system.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link href="../css/login-system.css" rel="stylesheet" type="text/css">
   </head>
 
+
+  <body class="none">
+    <h2 class="registration">Logging In...</h2>
+  </body>
