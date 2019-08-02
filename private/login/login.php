@@ -1,12 +1,9 @@
-<!--Processing for login system=======================================-->
 <?php
   //1 Start the session
   session_start();
   header('Refresh: 1; URL=../pages/profile.php?' . $_SESSION['username']);
 
   //2 Set variables
-  $first_name = $_POST['firstname'];
-  $last_name = $_POST['lastname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
   $host = "localhost";
@@ -54,7 +51,7 @@
     <title>Logging In...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../images/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="../css/login-system.css" rel="stylesheet" type="text/css">
