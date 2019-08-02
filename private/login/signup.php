@@ -4,7 +4,7 @@
   session_start();
   header('Refresh: 1; URL=../pages/profile.php?' . $_SESSION['username']);
 
-  //2 Set variables 
+  //2 Set variables and unset old variables 
   $first_name = $_POST['firstname'];
   $last_name = $_POST['lastname'];
   $username = $_POST['username'];
@@ -13,7 +13,7 @@
   $account = "root";
   $pass = "";
   $database = "z_lamegames";
-
+  unset($first_name, $last_name, $username, $password);
 
   //3 Connect to PhpMyAdmin
   $db = mysqli_connect($host, $account, $pass, $database);
@@ -35,10 +35,13 @@
   else {
     $registration = "INSERT INTO users (first_name, last_name, username, password, image, bio) VALUES ('$first_name', '$last_name', '$username', '$password', '', '')";
     mysqli_query($db, $registration);
-    $_SESSION['username'] = $username;
 
     //7 Close connection to MySQL database
     mysqli_close($db);
+
+    //8 Set username key
+    $_SESSION['username'] = $username;
+
   }
 ?>
 
@@ -49,7 +52,7 @@
     <title>Registering...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../images/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="../css/login-system.css" rel="stylesheet" type="text/css">
   </head>

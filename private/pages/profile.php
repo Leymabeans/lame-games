@@ -3,7 +3,7 @@
   //1 Start session and check for key
   session_start();
   if(!isset($_SESSION['username'])){
-    header("Location: ../../login/lor.php");
+    header("Location: ../login/lor.php");
   }
 
   //2 Set variables
@@ -21,7 +21,7 @@
   
   //4 Retrieve all information from database for user
   else {
-    $query = mysqli_query($db, "SELECT FirstName, LastName, Username, Image, Bio FROM users WHERE Username ='" . $_SESSION['username'] . "'");  
+    $query = mysqli_query($db, "SELECT first_name, last_name, username, image, bio FROM users WHERE username ='" . $_SESSION['username'] . "'");  
     $result = mysqli_fetch_array($query);
     if (!$result) {
       printf("Error: %s\n", mysqli_error($db));
@@ -40,12 +40,12 @@
     <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../images/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="../../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/profile.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
-    <script src="./js/index.js" type="text/javascript"></script>
+    <script src="../js/index.js" type="text/javascript"></script>
   </head>
 
 
@@ -85,11 +85,11 @@
     <div class="profile">
       <div class="layerup">
         <div class="contentlayer">
-        <a href="../edit/profile-edit.php"><button class="editBio"> Edit Profile</button></a>
-          <img class="profilePic" src="<?php echo $result['Image'] ?>">
-          <h2><?php echo $result['FirstName'] . " " . $result['LastName']?></h2>
-          <h3><?php echo "(" . $result['Username'] . ")"?><h3>
-          <p class="biosection"> <?php echo $result['Bio'] ?> </p>
+        <a href="../scripts/profile-edit.php"><button class="editBio"> Add to Profile</button></a>
+          <img class="profilePic" src="<?php echo $result['image'] ?>">
+          <h2><?php echo $result['first_name'] . " " . $result['last_name']?></h2>
+          <h3><?php echo "(" . $result['username'] . ")"?><h3>
+          <p class="biosection"> <?php echo $result['bio'] ?> </p>
         </div>
       </div>
     </div>
