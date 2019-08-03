@@ -2,9 +2,10 @@
 <?php
   //1 Start the session
   session_start();
-  header('Refresh: 1; URL=../pages/profile.php?'. $_SESSION['username']);
+  header('Refresh: 1.5; URL=../pages/profile.php?'. $_SESSION['username']);
   
-  //2 Declare variables from user input
+  //2 Set variables and unset old variables
+  unset($image);
   $image = $_POST['image'];
   $host = "localhost";
   $account = "root";
@@ -18,16 +19,19 @@
     die("Error: Could not connect to the database");
   }
 
-  //4 Insert information into database
-  else { 
-  $addProfile = "UPDATE useraccount SET Image='$image' WHERE Username ='" . $_SESSION['username'] . "'";  
-    mysqli_query($db, $addProfile);
-    if (!mysqli_query($db, $addProfile)) {
-      echo mysqli_error($db);
-    }
-    else {
-      header("Location: ./edit.php");
-    }
+  //4 Insert information into users table
+  $addProfile = "UPDATE users SET image='$image' WHERE username ='" . $_SESSION['username'] . "'";  
+  mysqli_query($db, $addProfile);
+
+  //5 If query is unsuccessful, show error
+  if (!mysqli_query($db, $addProfile)) {
+    echo mysqli_error($db);
+
+  }
+
+  //6 Otherwise close connection to the database
+  else {
+    mysqli_close($db);
   }
 
 ?>

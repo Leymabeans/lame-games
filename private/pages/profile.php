@@ -21,7 +21,7 @@
   
   //4 Retrieve all information from database for user
   else {
-    $query = mysqli_query($db, "SELECT first_name, last_name, username, image, bio FROM users WHERE username ='" . $_SESSION['username'] . "'");  
+    $query = mysqli_query($db, "SELECT first_name, last_name, username, image FROM users WHERE username ='" . $_SESSION['username'] . "'");  
     $result = mysqli_fetch_array($query);
     if (!$result) {
       printf("Error: %s\n", mysqli_error($db));
@@ -70,7 +70,7 @@
         </div>
       </nav>
       <div>
-        <a class="logout" href="../../login/logout.php">Logout</a>
+        <a class="logout" href="../login/logout.php">Logout</a>
       </div>
     </div>
  
@@ -85,7 +85,7 @@
           <img class="profilePic" src="<?php echo $result['image'] ?>">
           <h1 id="user"><?php echo $result['username'] ?><h1>
           <h3 id="name"><?php echo $result['first_name'] . " " . $result['last_name']?></h3>
-          <a href="../scripts/profile-edit.php">
+          <a href="../scripts/add-image.php">
             <button class="add"> Add Profile Image</button>
           </a>
         </section>   
