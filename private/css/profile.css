@@ -142,7 +142,7 @@ body {
 .background {
   background-color: rgba(121, 2, 99, 0.6);
   width: 80%;
-  height: 90%;
+  height: 80%;
   border-radius: 10px;
   margin: 0px auto 150px auto;
 }
@@ -151,7 +151,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: #ffffff;
-  height: 70%;
+  height: 90%;
   width: 90%;
   padding: 5px;
   border-radius: 15px;
