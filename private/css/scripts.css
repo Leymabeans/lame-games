@@ -1,5 +1,6 @@
 body {
-  background: #ededed;
+  background: rgba(121, 2, 99, 0.6);;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .profileEdit {
@@ -12,8 +13,8 @@ body {
 }
 
 h2 {
-  font-size: 36px;
-  color: rgba(21, 7, 43, 1);
+  font-size: 40px;
+  color: rgba(121, 2, 99, 0.6);
   margin-bottom: none;
 }
 
@@ -22,10 +23,10 @@ input {
   text-align: center;
   min-width: 300px;
   max-width: 500px;
-  border: 2px solid #ededed;
+  border: 1px solid rgba(121, 2, 99, 0.6);
   border-radius: 5px;
   padding: 8px;
-  margin: 5px auto;
+  margin: 0px auto 30px auto;
 }
 
 input:focus {
@@ -34,14 +35,13 @@ input:focus {
 
 input[type="submit"] {
   transition: opacity 0.4s;
-  background-color: #ededed;
-  color: gray;
+  background-color: rgba(121, 2, 99, 0.6);
+  color: #ffffff;
   text-align: center;
   width: 80px;
-  border: 2px solid #ededed;
+  border: 2px rgba(121, 2, 99, 0.6);
   border-radius: 5px;
   padding: 5px 15px;
-  margin-top: 30px;
 }
 
 input[type="submit"]:hover {

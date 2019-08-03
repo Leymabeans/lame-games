@@ -43,7 +43,7 @@
     <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="../css/profile.css" rel="stylesheet" type="text/css">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
     <script src="../js/index.js" type="text/javascript"></script>
   </head>
@@ -51,7 +51,7 @@
 
 
 <!--Nav Bar==========================================================-->
-  <body>  
+  <body class="none">  
     <div class="header">
       <nav role="navigation">
         <div id="menuToggle">
@@ -77,47 +77,48 @@
 
 
 <!--Profile=======================================================-->
-    <div class="background">
-      <div class="contentlayer">
+    <section id="profile">
+      <img class="profilePic" src="../images/user_pic.jpg">
+      <h2 id="user"><?php echo $result['username'] ?><h2><br><br><br><br><br>
+      <button class="games" id="display1" onclick="display1()">Game1</button>
+      <button class="games" id="display2" onclick="display2()">Game2</button>
+      <button class="games" id="display3" onclick="display3()">Game3</button>
+    </section> 
 
-        <!--Profile===========-->
-        <section class="profile">
-          <img class="profilePic" src="<?php echo $result['image'] ?>">
-          <h1 id="user"><?php echo $result['username'] ?><h1>
-          <h3 id="name"><?php echo $result['first_name'] . " " . $result['last_name']?></h3>
-          <a href="../scripts/add-image.php">
-            <button class="add"> Add Profile Image</button>
-          </a>
-        </section>   
+    <section id="rank">        
+      <h1 id="global">Rankings</h1>
+      <table id="game1">
+        <tr>
+          <th>Rank<th>
+          <th>Score<th>
+        </tr>
+        <tr>
+          <th>121<th>
+          <th>28,990<th>
+        </tr>
+      </table>
 
-        <!--Global Rankings===========-->
-        <section class="rank">        
-          <h2 class="global">Global Rankings</h2>
-          <table class="personalScore">
-            <caption>Cross Country Collin</caption>
-            <tr>
-              <th>Rank<th>
-              <th>Score<th>
-            </tr>
-            <tr>
-              <th>121<th>
-              <th>28,990<th>
-            </tr>
-          </table>
+      <table id="game2">
+        <tr>
+          <th>Rank<th>
+          <th>Score<th>
+        </tr>
+        <tr>
+          <th>121<th>
+          <th>28,990<th>
+        </tr>
+      </table>
 
-          <table class="personalScore">
-            <caption>Escape</caption>
-            <tr>
-              <th>Rank<th>
-              <th>Score<th>
-            </tr>
-            <tr>
-              <th>2<th>
-              <th>45<th>
-            </tr>
-          </table>
-        </section>
-      </div>
-    </div>
+      <table id="game3">
+        <tr>
+          <th>Rank<th>
+          <th>Score<th>
+        </tr>
+        <tr>
+          <th>121<th>
+          <th>28,990<th>
+        </tr>
+      </table>
+    </section>
   </body>
 </html>
