@@ -40,7 +40,7 @@
     <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../images/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
     <link href="../css/profile.css" rel="stylesheet" type="text/css">
@@ -50,14 +50,9 @@
 
 
 
-<!--Loader===========================================================-->
-  <body onload="myFunction()">
-    <div id="loader"></div>
-
-
-
 <!--Nav Bar==========================================================-->
-    <div class="header headerSpace">
+  <body>  
+    <div class="header">
       <nav role="navigation">
         <div id="menuToggle">
           <input type="checkbox"/>
@@ -82,53 +77,47 @@
 
 
 <!--Profile=======================================================-->
-    <div class="profile">
-      <div class="layerup">
-        <div class="contentlayer">
-        <a href="../scripts/profile-edit.php"><button class="editBio"> Add to Profile</button></a>
-          <img class="profilePic" src="<?php echo $result['image'] ?>">
-          <h2><?php echo $result['first_name'] . " " . $result['last_name']?></h2>
-          <h3><?php echo "(" . $result['username'] . ")"?><h3>
-          <p class="biosection"> <?php echo $result['bio'] ?> </p>
-        </div>
-      </div>
-    </div>
-
-
-<!--Global Rankings===============================================-->
-    <div class="layerup">
+    <div class="background">
       <div class="contentlayer">
-        <h2 class="global">Global Rankings</h2>
 
-        <div class="personalScore">
-          <h3>Cross Country Collin</h3>
-          <p>Rank: </p>
-          <p>Score: </p>
-        </div>
+        <!--Profile===========-->
+        <section class="profile">
+          <img class="profilePic" src="<?php echo $result['image'] ?>">
+          <h1 id="user"><?php echo $result['username'] ?><h1>
+          <h3 id="name"><?php echo $result['first_name'] . " " . $result['last_name']?></h3>
+          <a href="../scripts/profile-edit.php">
+            <button class="add"> Add Profile Image</button>
+          </a>
+        </section>   
 
-        <div class="personalScore">
-          <h3>Escape Game</h3>
-          <p>Rank: </p>
-          <p>Score: </p>
-        </div>
+        <!--Global Rankings===========-->
+        <section class="rank">        
+          <h2 class="global">Global Rankings</h2>
+          <table class="personalScore">
+            <caption>Cross Country Collin</caption>
+            <tr>
+              <th>Rank<th>
+              <th>Score<th>
+            </tr>
+            <tr>
+              <th>121<th>
+              <th>28,990<th>
+            </tr>
+          </table>
+
+          <table class="personalScore">
+            <caption>Escape</caption>
+            <tr>
+              <th>Rank<th>
+              <th>Score<th>
+            </tr>
+            <tr>
+              <th>2<th>
+              <th>45<th>
+            </tr>
+          </table>
+        </section>
       </div>
     </div>
-    
-
-    
-<!--Footer========================================================-->
-    <footer>
-      <br><br><br>
-      <a href="https://github.com/nathanleysgit" target="_blank">
-        <i class="fab fa-github fa-3x"></i>
-      </a>
-
-      <a href="https://www.youtube.com" target="_blank">
-        <i class=" free fas fa-tv fa-3x" style="color: #ffffff"></i>
-      </a>
-
-      <br>
-      <span> 2018 Lame Games.</span>
-    </footer>  
   </body>
 </html>

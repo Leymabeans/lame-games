@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login or Register</title>
+    <title>Signup or Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../images/LGLogo.ico" rel="shortcut icon">
+    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
     <link href="../css/login-system.css" rel="stylesheet" type="text/css">
