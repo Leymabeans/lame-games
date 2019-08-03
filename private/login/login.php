@@ -1,9 +1,10 @@
 <?php
   //1 Start the session
   session_start();
-  header('Refresh: 1; URL=../pages/profile.php?' . $_SESSION['username']);
+  header('Refresh: 1.5; URL=../pages/profile.php?' . $_SESSION['username']);
 
-  //2 Set variables
+  //2 Set variables and unset old ones
+  unset($username, $password);
   $username = $_POST['username'];
   $password = $_POST['password'];
   $host = "localhost";
@@ -37,10 +38,7 @@
     
     //8 Close connection to MySQL database
     mysqli_close($db);
-    }
-
-  
-  
+    } 
 ?>
 
 

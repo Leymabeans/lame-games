@@ -2,18 +2,18 @@
 <?php
   //1 Start session and redirect
   session_start();
-  header('Refresh: 1; URL=../pages/profile.php?' . $_SESSION['username']);
+  header('Refresh: 1.5; URL=../pages/profile.php?' . $_SESSION['username']);
 
   //2 Set variables and unset old variables 
-  $first_name = $_POST['firstname'];
-  $last_name = $_POST['lastname'];
+  unset($first_name, $last_name, $username, $password);
+  $first_name = $_POST['first_name'];
+  $last_name = $_POST['last_name'];
   $username = $_POST['username'];
   $password = $_POST['password'];
   $host = "localhost";
   $account = "root";
   $pass = "";
   $database = "z_lamegames";
-  unset($first_name, $last_name, $username, $password);
 
   //3 Connect to PhpMyAdmin
   $db = mysqli_connect($host, $account, $pass, $database);
@@ -33,7 +33,7 @@
     
   //6 Otherwise insert information into PhpMyAdmin
   else {
-    $registration = "INSERT INTO users (first_name, last_name, username, password, image, bio) VALUES ('$first_name', '$last_name', '$username', '$password', '', '')";
+    $registration = "INSERT INTO users (first_name, last_name, username, password) VALUES ('$first_name', '$last_name', '$username', '$password')";
     mysqli_query($db, $registration);
 
     //7 Close connection to MySQL database
