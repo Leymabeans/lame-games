@@ -2,10 +2,10 @@
 <?php
   //1 Start the session
   session_start();
+  header('Refresh: 1; URL=../pages/profile.php?'. $_SESSION['username']);
   
   //2 Declare variables from user input
   $image = $_POST['image'];
-  $bio = $_POST['bio'];
   $host = "localhost";
   $account = "root";
   $pass = "";
@@ -20,13 +20,13 @@
 
   //4 Insert information into database
   else { 
-  $addProfile = "UPDATE useraccount SET Image='$image', Bio='$bio' WHERE Username ='" . $_SESSION['username'] . "'";  
+  $addProfile = "UPDATE useraccount SET Image='$image' WHERE Username ='" . $_SESSION['username'] . "'";  
     mysqli_query($db, $addProfile);
     if (!mysqli_query($db, $addProfile)) {
       echo mysqli_error($db);
     }
     else {
-      header("Location: ./edit-success.php");
+      header("Location: ./edit.php");
     }
   }
 
@@ -35,19 +35,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Updating Profile...</title>
+    <title>Editing Profile...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../images/LGLogo.ico" rel="shortcut icon">
+    <link href="../Miscellaneous/LGLogo.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-    <link href="./../css/edit.css" rel="stylesheet" type="text/css">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link href="./edit.css" rel="stylesheet" type="text/css">
   </head>
 
-
-  <body>
-
-
+  <body class="none">
+    <h2 class="successtext">Editing Profile...</h2>
   </body>
-</html>
