@@ -11,7 +11,7 @@ var myVar;
         document.getElementById('global').innerHTML = "Game 1";
         document.getElementById('game1').style.display = "block";
         document.getElementById('game2').style.display = "none";
-        document.getElementById('game2').style.display = "none";
+        document.getElementById('game3').style.display = "none";
       }
       
       function display2() {

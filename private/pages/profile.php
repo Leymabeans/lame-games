@@ -78,7 +78,7 @@
 
 <!--Profile=======================================================-->
     <section id="profile">
-      <img class="profilePic" src="../images/user_pic.jpg">
+      <img class="profile-pic" src="../images/user_pic.jpg">
       <h2 id="user"><?php echo $result['username'] ?><h2><br><br><br><br><br>
       <button class="games" id="display1" onclick="display1()">Game1</button>
       <button class="games" id="display2" onclick="display2()">Game2</button>
@@ -86,39 +86,58 @@
     </section> 
 
     <section id="rank">        
-      <h1 id="global">Rankings</h1>
-      <table id="game1">
-        <tr>
-          <th>Rank<th>
-          <th>Score<th>
-        </tr>
-        <tr>
-          <th>121<th>
-          <th>28,990<th>
-        </tr>
-      </table>
+      <h1 id="global">Game 1</h1>
 
-      <table id="game2">
-        <tr>
-          <th>Rank<th>
-          <th>Score<th>
-        </tr>
-        <tr>
-          <th>121<th>
-          <th>28,990<th>
-        </tr>
-      </table>
+      <div id="game1">
+        <table class="results">
+          <tr>
+            <th>Rank<th>
+            <th>Score<th>
+            <th>Kills<th>
+            <th>Wins<th>
+          </tr>
+          <tr>
+            <td>121<td>
+            <td>28,990<td>
+            <td>345<td>
+            <td>3<td>
+          </tr>
+        </table>
+      </div>
 
-      <table id="game3">
-        <tr>
-          <th>Rank<th>
-          <th>Score<th>
-        </tr>
-        <tr>
-          <th>121<th>
-          <th>28,990<th>
-        </tr>
-      </table>
+      <div id="game2">
+        <table class="results" >
+          <tr>
+            <th>Rank<th>
+            <th>Score<th>
+            <th>Kills<th>
+            <th>Wins<th>
+          </tr>
+          <tr>
+            <td>122<td>
+            <td>28,990<td>
+            <td>345<td>
+            <td>3<td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="game3">
+        <table class="results">
+          <tr>
+            <th>Rank<th>
+            <th>Score<th>
+            <th>Kills<th>
+            <th>Wins<th>
+          </tr>
+          <tr>
+            <td>123<td>
+            <td>28,990<td>
+            <td>345<td>
+            <td>3<td>
+          </tr>
+        </table>
+      </div>
     </section>
   </body>
 </html>
