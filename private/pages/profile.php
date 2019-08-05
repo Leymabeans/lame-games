@@ -86,38 +86,30 @@
     </section> 
 
     <section id="rank">        
-      <h1 id="global">Game 1</h1>
+      <h1 id="global">Cross Country Collin</h1>
 
-      <div id="game1">
+      <div id="ccc">
         <table class="results">
           <tr>
-            <th>Rank<th>
             <th>Score<th>
-            <th>Kills<th>
-            <th>Wins<th>
+            <th>Matches Played<th>
           </tr>
           <tr>
-            <td>121<td>
-            <td>28,990<td>
-            <td>345<td>
+            <td>60<td>
             <td>3<td>
           </tr>
         </table>
       </div>
 
-      <div id="game2">
+      <div id="dof">
         <table class="results" >
           <tr>
-            <th>Rank<th>
             <th>Score<th>
-            <th>Kills<th>
-            <th>Wins<th>
+            <th>Matches Played<th>
           </tr>
           <tr>
-            <td>122<td>
-            <td>28,990<td>
             <td>345<td>
-            <td>3<td>
+            <td>6,314<td>
           </tr>
         </table>
       </div>
@@ -125,16 +117,12 @@
       <div id="game3">
         <table class="results">
           <tr>
-            <th>Rank<th>
             <th>Score<th>
-            <th>Kills<th>
-            <th>Wins<th>
+            <th>Matches Played<th>
           </tr>
           <tr>
-            <td>123<td>
-            <td>28,990<td>
-            <td>345<td>
-            <td>3<td>
+            <td>N/A<td>
+            <td>N/A<td>
           </tr>
         </table>
       </div>
