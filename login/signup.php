@@ -1,15 +1,14 @@
-<!--Processing for login system=======================================-->
 <?php
-  //1 Start session and redirect
+  //1 Start session
   session_start();
-  header('Refresh: 1.5; URL=../pages/profile.php?' . $_SESSION['username']);
-
-  //2 Set variables and unset old variables 
+  
+  //2 Set new variables and unset old variables 
   unset($first_name, $last_name, $username, $password);
   $first_name = $_POST['first_name'];
   $last_name = $_POST['last_name'];
   $username = $_POST['username'];
   $password = $_POST['password'];
+
   $host = "localhost";
   $account = "root";
   $pass = "";
@@ -42,6 +41,8 @@
     //8 Set username key
     $_SESSION['username'] = $username;
 
+    //9 Redirect to profile page
+    header('Refresh: 1.5; URL=../private/profile.php?' . $_SESSION['username']);
   }
 ?>
 
