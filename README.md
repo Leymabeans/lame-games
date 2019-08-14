@@ -1,13 +1,21 @@
 # LameGames
-Lame Games is an organization created to bring programming and fun together. In this timed competition, <br>
-two programmers use the Python programming language to create the best game possible between the two <br>
-competitors. We hold friendly gaming competitions as well as providing full developed games that you can <br>
-download through our website.
+<br><br>
+<b>Overview</br>
+Lame Games is an organization created to bring programming and fun together! In this timed competition, <br>
+two programmers use the Python programming language to create the best game possible in a short period of time <br>
+We hold friendly gaming competitions as well as providing full developed games on our application that you can<br>
+download through our website. Lame Games was started back in the summer of 2018 and started building the software<br>
+in the fall of '18. Lame Game's is expected to be up and running by the summer of 2019. <br>
 
-This repository contains all the files of this website and the application. Our site gives details <br>about us and the organization, and gives a link the user can download our Python application from. <b>(Our <br>
-Application holds all developed games for users to play on their own computer)<b>. The leaderboards page shows <br>
-the top scoring players in each game. After login, users are brought to their personal profile page where they can <br>
-see where they rank globally, with their individual scores listed.
+<b>Content</br>
+This repository contains all the files of this website and the application. Our site gives details about us and <br>
+the organization, and gives a link the user can download our Python application from. Users can sign up for an account<br>
+and check their stats on the games they've played on our application.
 
-The creators Nathan Ley <b>(NathanLeysGit)</b> and Andrew Zwiefel <b>(Zellazoom)</b> hold all permissions to all <br>
-the Lame Games' content.
+<b>Development</br>
+Nathan Ley <b>(NathanLeysGit)</b> built the front and backend of the website and Andrew Zwiefel <b>(Zellazoom)</b> created <br>
+application. Both are respondsible for building the games you enjoy but are not respondsible if you mom yells at you for playing <br>
+our video games too much. <br>
+
+<b>Permissions</br>
+The creators Nathan Ley  and Andrew Zwiefel hold all permissions to all of the Lame Games' content.
