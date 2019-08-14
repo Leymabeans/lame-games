@@ -1,35 +1,26 @@
 <!--Processing for showing user profiles==========================-->
 <?php
-  //1 Start session and check for key
-  session_start();
-  if(!isset($_SESSION['username'])){
-    header("Location: ../login/lor.php");
-  }
+  //1 Check if user is logged in
+  include "../includes/key-check.php";
 
-  //2 Set variables
-  $host = "localhost";
-  $account = "root";
-  $pass = "";
-  $database = "z_lamegames";
-
-
-  //3 Connect to PhpMyAdmin
-  $db = mysqli_connect($host, $account, $pass, $database);
-  if ($db === false ) {
-    die("Error: Could not connect to the database");
-  }
+  //2 Connect to Lame Games database
+  include "../includes/db-connection.php";
   
-  //4 Retrieve all information from database for user
-  else {
-    $query = mysqli_query($db, "SELECT first_name, last_name, username FROM users WHERE username ='" . $_SESSION['username'] . "'");  
-    $result = mysqli_fetch_array($query);
-    if (!$result) {
-      printf("Error: %s\n", mysqli_error($db));
-      exit();
+  //3 Retrieve all information from database for user
+  $query = mysqli_query($db, "SELECT first_name, last_name, username FROM users WHERE username ='" . $_SESSION['username'] . "'");  
+  
+  //4 Check if query was successful
+  include "../includes/query-success.php";
+
+  //5 Create an array of the db for displaying user profile
+  $result = mysqli_fetch_array($query);
+  if (!$result) {
+    printf("Error: %s\n", mysqli_error($db));
+    exit();
   }
-    }
-    // Close connection to MySQL database
-    mysqli_close($db);
+
+  //6 Close connection to Lame Games database
+  mysqli_close($db);
     
 ?>
 
