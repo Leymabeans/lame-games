@@ -52,6 +52,9 @@
     <div class="text"> 
       <h1>Lame Games</h1>
       <p>Wasting time since '18</p>
+      <a href="#">
+        <h4>Download Now</h4>
+      </a>
     </div>
   </body>
 </html>
