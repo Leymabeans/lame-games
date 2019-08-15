@@ -24,7 +24,7 @@
     if ($username == 'admin') {
       $_SESSION['permission'] = 1;
       $_SESSION['username'] = $username;
-      header('Refresh: 1.5; URL=../admin/admin.php');
+      header('Refresh: 1.5; URL=../admin/dashboard.php');
     }
 
     //8 If regular user, redirect to profile page
