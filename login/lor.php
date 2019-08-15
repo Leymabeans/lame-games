@@ -1,25 +1,23 @@
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Signup or Login</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
+    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="../css/login-system.css" rel="stylesheet" type="text/css">
   </head>
 
 
 
-<!--Loader===========================================================-->
+  <!--Loader==================================-->
   <body onload="myFunction()">
     <div id="loader"></div>
 
 
-
-<!--Login Form=======================================================-->     
+    <!--Signup Form===========================-->     
     <div class="grid-container">  
       <div class="signup">
         <h1>Sign Up</h1>
@@ -32,6 +30,7 @@
         </form>
       </div>
 
+      <!--Login Form===========================-->  
       <div class="login">
         <h1>Login</h1>
         <form method="post" action="./login.php" autocomplete="new-password">

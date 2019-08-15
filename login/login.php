@@ -49,14 +49,14 @@
 <html lang="en">
   <head>
     <title>Logging In...</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="../css/login-system.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   </head>
 
 
   <body class="none">
-    <h2 class="registration">Logging In...</h2>
+    <h2 class="success">Logging In...</h2>
   </body>
