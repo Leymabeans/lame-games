@@ -5,7 +5,7 @@
   //2 Connect to Matrix64 database
   include '../includes/db-connection.php';
 
-  //3 Retrieve all information from employees table
+  //3 Retrieve all information from users table
   $query = mysqli_query($db, "SELECT first_name, last_name, username FROM users"); 
   
   //4 Check if query was successful
@@ -20,18 +20,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin | Users Dashboard</title>
+    <title>Admin | Dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../images/pink.ico" rel="shortcut icon">
+    <link href="../images/favicon.ico" rel="shortcut icon">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <script src="../js/index.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-    <link href="../../css/time.css" rel="stylesheet" type="text/css">
-    <script src="../../js/index.js" type="text/javascript"></script>
   </head>
 
-  <!--Header --==================================-->
-  <body>
-    <div class="header">
+  <!--Header==================================-->
+  <body class="admin_none">
+    <div class="admin_header">
       <nav role="navigation">
         <div id="menuToggle">
           <input type="checkbox"/>
@@ -41,6 +41,9 @@
           <ul id="menu">
             <a class="pages" href="../index.php">
               <li>Home</li>
+            </a>
+            <a class="pages" href="./dashboard.php">
+              <li>Dashboard</li>
             </a>
             <a class="pages" href="./profile.php?<?php echo $_SESSION['username'] ?>">
               <li>Profile</li>
@@ -53,36 +56,25 @@
       </div>
     </div>
 
-      <div class="title">
-        <h1>Timeclock Dashboard</h1>
-      </div>
-
-      <a href="./time-form.php">
-        <button class="more admin_more" id="new">New User</button>
-      </a>  
-    </div>
-
     <!--Users=================-->
-      <?php
-        echo "<br>";
-        echo "<table>";
-      ?>
+    <div class="dashboard">
+      <h2 class="title">Users</h2>
+      <table class="manage">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
 
-      <tr>
-        <th>Username</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-      </tr>
-
-      <?php
-        while ($row = mysqli_fetch_assoc($query)) { 
-          echo "<tr>";
-          foreach ($row as $field => $value) { 
-              echo "<td>" . $value . "</td>";  
+        <?php
+          while ($row = mysqli_fetch_assoc($query)) { 
+            echo "<tr>";
+            foreach ($row as $field => $value) { 
+                echo "<td class='data'>" . $value . "</td>";  
+            }
+            echo "</tr>";
           }
-          echo "</tr>";
-        }
-        echo "</table>";
-      ?>
+          echo "</table>";
+        ?>
     </div>
   </body>
