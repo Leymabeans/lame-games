@@ -9,6 +9,8 @@ body {
   background-position: center;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-y: hidden;
 }
   
 .grid-container {
@@ -17,11 +19,6 @@ body {
   justify-content: center;
   align-content: center;
   text-align: justify;
-}
-
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 
@@ -73,40 +70,6 @@ input:focus {
   outline: 0;
 }
 
-.addpic {
-  display: block;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  font-size: 13px;
-  width: 160px;
-  background-color: #ffffff;
-  color: gray;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  margin: 10px auto;
-}
- 
-.addpic:hover {
-  cursor: pointer;
-}
-
-.addpic [type=url] {
-  cursor: inherit;
-  display: block;
-  font-size: 13px;
-  color: lightgray;
-  filter: alpha(opacity=0);
-  min-height: 100%;
-  min-width: 100%;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  top: 0;
-} 
-
 input[type="submit"] {
   transition: opacity 0.4s;
   background-color: #ffffff;
@@ -131,7 +94,7 @@ input[type="submit"]:hover {
   background: #ededed !important;
 }
 
-.registration {
+.success {
   color: rgba(121, 2, 99, 0.6);
   margin: 20px auto;
   text-align: center;
