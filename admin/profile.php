@@ -27,28 +27,26 @@
   $ccc_matches = mysqli_num_rows($ccc);
 
   //6 Close connection to Lame Games database
-  mysqli_close($db);
-    
+  mysqli_close($db);  
 ?>
 
-<!--Meta Data======================================================= -->
+
+<!--Meta Data=======================================================-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Admin | Profile</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
+    <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="../css/index.css" rel="stylesheet" type="text/css">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
     <script src="../js/index.js" type="text/javascript"></script>
   </head>
 
 
 
-<!--Nav Bar==========================================================-->
+  <!--Header==================================-->
   <body class="none">  
     <div class="header">
       <nav role="navigation">
@@ -58,8 +56,11 @@
           <span></span>
           <span></span>
           <ul id="menu">
-            <a class="pages" href="../../index.php">
+            <a class="pages" href="../index.php">
               <li>Home</li>
+            </a>
+            <a class="pages" href="./dashboard.php">
+              <li>Dashboard</li>
             </a>
             <a class="pages" href="./profile.php?<?php echo $result['username']  ?>">
               <li>Profile</li>
@@ -74,14 +75,15 @@
  
 
 
-<!--Profile=======================================================-->
+    <!--Profile==================================-->
     <section id="profile">
-      <img class="profile-pic" src="../images/user_pic.jpg">
+      <img class="profile-pic" src="../images/admin_pic.jpg">
       <h2 id="user"><?php echo $result['username'] ?><h2> <br><br><br><br><br>
       <button class="games" id="display1" onclick="display1()">Cross Country Collin</button>
       <button class="games" id="display2" onclick="display2()">Duel of the Fates</button>
     </section> 
 
+    <!--Cross Country Collin====================-->
     <section id="rank">        
       <h1 id="global">Cross Country Collin</h1>
       <div id="ccc">
@@ -99,6 +101,7 @@
         </table>
       </div>
 
+      <!--Duel of the Fates====================-->
       <div id="dof">
         <table class="results" >
           <tr>
