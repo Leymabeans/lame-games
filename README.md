@@ -14,8 +14,7 @@ and check their stats on the games they've played on our application.<br><br>
 
 <b>Development</b><br>
 Nathan Ley <b>(NathanLeysGit)</b> built the front and backend of the website and Andrew Zwiefel <b>(Zellazoom)</b> created <br>
-application. Both are respondsible for building the games you enjoy but are not respondsible if you mom yells at you for playing <br>
-our video games too much. <br><br>
+application. Both are respondsible for building the games you enjoy but are not respondsible if you mom yells at you for playing our video games too much. <br><br>
 
 <b>Permissions</b><br>
-The creators Nathan Ley  and Andrew Zwiefel hold all permissions to all of the Lame Games' content.
+Nathan Ley and Andrew Zwiefel hold all permissions to all of the Lame Games' content.
