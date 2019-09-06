@@ -46,7 +46,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="../images/favicon.ico" rel="shortcut icon">
-    <link href="../css/login-system.css" rel="stylesheet" type="text/css">
+    <link href="../style/index.css" rel="stylesheet" type="text/css">
   </head>
 
   <body class="none">
