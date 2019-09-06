@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="./images/favicon.ico" rel="shortcut icon">
-    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <link href="./style/index.css" rel="stylesheet" type="text/css">
     <script src="./js/index.js" type="text/javascript"></script>
   </head>
 
