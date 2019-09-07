@@ -1,6 +1,6 @@
 <!--Meta Data======================================================= -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Signup or Login</title>
     <meta charset="UTF-8">
@@ -9,12 +9,6 @@
     <link href="../images/favicon.ico" rel="shortcut icon">
     <link href="../style/index.css" rel="stylesheet" type="text/css">
   </head>
-
-
-
-  <!--Loader==================================-->
-  <body onload="myFunction()">
-    <div id="loader"></div>
 
 
     <!--Signup Form===========================-->     
@@ -34,9 +28,9 @@
       <div class="action" id="login">
         <h1>Login</h1>
         <form method="post" action="./login.php" autocomplete="new-password">
-          <input class="input" type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" required pattern="[A-Za-z0-9]{3,}"" title="Only contain letters and numbers. 4 characters or more"><br>
-          <input class="input" type="password" placeholder="Password" onfocus="this.placeholder = ''" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"><br>
-          <input class="submit" type="submit" value="Login">
+          <input type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" required pattern="[A-Za-z0-9]{3,}"" title="Only contain letters and numbers. 4 characters or more"><br>
+          <input type="password" placeholder="Password" onfocus="this.placeholder = ''" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"><br>
+          <input type="submit" value="Login">
         </form>
       </div>
     </div>

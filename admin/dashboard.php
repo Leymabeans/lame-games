@@ -57,7 +57,7 @@
             <a class="pages" href="./dashboard.php">
               <li>Dashboard</li>
             </a>
-            <a class="pages" href="./profile.php?<?php echo $_SESSION['username'] ?>">
+            <a class="pages" href="../private/profile.php?<?php echo $_SESSION['username'] ?>">
               <li>Profile</li>
             </a>
           </ul>
