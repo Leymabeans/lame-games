@@ -3,6 +3,7 @@
 @import "profile";
 @import "admin";
 @import "lor";
+@import "keyframes";
 $primary-color: rgba(121, 2, 99, 0.6);
 $secondary-color: rgba(0, 0, 50, 0.5);
 $white: rgba(255, 255, 255, 1);
@@ -25,9 +26,16 @@ body {
   overflow-y: hidden;
 }
 
-  
 ::-webkit-scrollbar { 
   display: none; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  text-align: justify;
 }
 
 #loader {
@@ -40,12 +48,6 @@ body {
   width: 80px;
   height: 80px;
   animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(360deg); }
-  100% { transform: rotate(720deg); }
 }
 
 #menuToggle {
