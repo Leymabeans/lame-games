@@ -38,17 +38,6 @@ body {
   text-align: justify;
 }
 
-#loader {
-  position: relative;
-  z-index: 1;
-  margin: 45vh auto;
-  border: 8px solid $white;
-  border-radius: 50%;
-  border-top: 8px solid $primary-color;
-  width: 80px;
-  height: 80px;
-  animation: spin 1.5s linear infinite;
-}
 
 #menuToggle {
   display: block;
