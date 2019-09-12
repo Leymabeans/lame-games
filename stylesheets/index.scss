@@ -1,0 +1,25 @@
+//Import Modules
+@import "modules/colors";
+@import "modules/extends";
+@import "modules/fonts";
+@import "modules/mixins";
+
+//Import Designs
+@import "designs/keyframes";
+
+//Import pages
+@import "pages/admin";
+@import "pages/home";
+@import "pages/lor";
+@import "pages/profile";
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  text-align: justify;
+}
