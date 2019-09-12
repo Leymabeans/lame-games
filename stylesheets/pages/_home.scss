@@ -1,0 +1,52 @@
+/*Slideshow-images===========================*/
+.slideshow {
+  width: 100%;
+  height: 100%; 
+  position:relative; 
+
+  img { 
+    position:absolute; 
+    animation: slide 20s infinite;
+    opacity:0; 
+    width: 100%; 
+    height: 100%;
+    height: auto;
+    margin: -50px 0 0 0;
+  }
+  &:nth-child(4){animation-delay:0s;}
+  &:nth-child(3){animation-delay:5s;}
+  &:nth-child(2){animation-delay:10s;}
+  &:nth-child(1){animation-delay:15s;}
+}
+
+
+
+/*Slideshow-Text=============================*/
+.text {
+  position: absolute;
+  background: linear-gradient($secondary-color, $secondary-color); 
+  color: $white;
+  text-align: center;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 10px;
+  padding: 5px 15px;
+
+  h1 {
+    font-size: 80px;
+    margin-bottom: -10px;
+  }
+  
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  
+  h4 {
+    width: 200px;
+    padding: 3px 8px;
+    border: 1px solid $white;
+    border-radius: 10px;
+    margin: 40px auto 10px auto;
+  }
+}
