@@ -19,7 +19,8 @@
   </head>
 
 
-  <!--Navigation--------------------------->
+
+  <!--Navigation---------------------------------->
   <body>
     <nav role="navigation">
       <div id="menuToggle">
@@ -28,31 +29,26 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a class="pages" href="./index.php">
+          <a class="page" href="./index.php">
             <li>Home</li>
           </a>
-          <a class="pages" href="./login/lor.php">
+          <a class="page" href="./login/lor.php">
             <li>Profile</li>
           </a>
         </ul>
       </div>
     </nav>
     
-    
-    <!--Slideshow===============================-->
-    <div class="slideshow">
-      <img src="./images/setup.jpg"> 
-      <img src="./images/setup2.jpg">
-      <img src="./images/setup3.jpg">
-      <img src="./images/setup4.jpg">
-    </div>
 
-    <div class="text"> 
-      <h1>Lame Games</h1>
-      <p>Wasting time since '18</p>
-      <a href="#">
-        <h4>Download Now</h4>
-      </a>
-    </div>
+
+    <!--Header-------------------------------->
+    <header class="container-fluid">
+      <div class="slideshow"></div>
+      <div class="text"> 
+        <h1 class="display-6">Lame Games</h1>
+        <p>Wasting time since '18</p>
+        <a class="btn btn-primary" href="#">Download Now</a>
+      </div>
+    </header>
   </body>
 </html>
