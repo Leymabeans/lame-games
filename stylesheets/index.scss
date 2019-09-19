@@ -1,13 +1,15 @@
-//Import Modules
-@import "modules/colors";
-@import "modules/extends";
-@import "modules/fonts";
-@import "modules/mixins";
+//Abstracts
+@import "abstracts/colors";
+@import "abstracts/typography";
 
-//Import Designs
-@import "designs/keyframes";
+//Base
+@import "base/mixins";
+@import "base/reset";
 
-//Import pages
+//Components
+@import "components/navigation";
+
+//Pages
 @import "pages/admin";
 @import "pages/home";
 @import "pages/lor";
