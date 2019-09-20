@@ -1,7 +1,7 @@
 /*Login and SignUp========================*/
 .action {
   text-align: center;
-  background-color: rgba(121, 2, 99, 0.6);
+  background-color: $light-primary;
   border-radius: 10px;
   padding: 35px 20px;
   margin: 150px 20px;
@@ -59,7 +59,7 @@
 }
 
 .success {
-  color: $primary-color;
+  color: $primary;
   margin: 20px auto;
   text-align: center;
   font-size: 30px;

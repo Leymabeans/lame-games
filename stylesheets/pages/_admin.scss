@@ -4,7 +4,7 @@
 }
 
 .admin_header {
-  background-color: $primary-color;
+  background-color: $primary;
   height: 80px;
   width: 100vw;
   padding-bottom: 10px;
@@ -29,7 +29,7 @@
   #users {
     grid-column: 1 / 2; 
     text-align: center;
-    background-color: $primary-color;
+    background-color: $primary;
     border-radius: 10px;
     padding: 35px 20px;
     margin: 100px 20px;
@@ -38,7 +38,7 @@
    #games{
     grid-column: 2 / 3; 
     text-align: center;
-    background-color: $primary-color;
+    background-color: $primary;
     border-radius: 10px;
     padding: 35px 20px;
     margin: 100px 20px;
