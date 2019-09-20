@@ -2,18 +2,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 50, 0.5)), to(rgba(0, 0, 50, 0.5))), url("../images/setup5.jpg");
-  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url("../images/setup5.jpg");
-  min-height: 100vh;
-  max-width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   font-family: 'Open Sans', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -187,16 +178,20 @@ a:hover {
   margin: 100px 20px;
 }
 
-/*Slideshow-images===========================*/
-.slideshow {
-  background-image: url("../../images/setup.jpg");
-  width: 100%;
-  height: 100%;
-  position: relative;
+/*Parrallax Header===================*/
+.parrallax {
+  background-image: url("../images/jumbotron.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -29px;
+  margin-left: -15px;
+  height: 100vh;
+  width: 100vw;
 }
 
-/*Slideshow-Text=============================*/
-.text {
+.parrallax .intro {
   position: absolute;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 50, 0.5)), to(rgba(0, 0, 50, 0.5)));
   background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5));
@@ -208,17 +203,34 @@ a:hover {
   padding: 5px 15px;
 }
 
-.text h1 {
+.parrallax .intro h1 {
   font-size: 80px;
 }
 
-.text a {
+/*Information========================*/
+.info {
+  margin-top: 170px;
+}
+
+.info img {
+  width: 80%;
+  height: 300px;
+}
+
+/*Download========================*/
+.download {
+  margin-top: 140px;
+  text-align: center;
+}
+
+.download a {
+  display: block;
   background-color: rgba(121, 2, 99, 0.6);
   border: none;
   margin-bottom: 10px;
 }
 
-.text a:hover {
+.download a:hover {
   background-color: rgba(121, 2, 99, 0.6);
   opacity: 0.9;
 }
