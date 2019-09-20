@@ -8,7 +8,7 @@
 
   .intro {
     position: absolute;
-    background: linear-gradient($secondary-color, $secondary-color); 
+    background: linear-gradient($light-primary, $light-primary); 
     color: $white;
     text-align: center;
     bottom: 40px;
@@ -43,12 +43,12 @@
 
   a {
     display: block;
-    background-color: $primary-color;
+    background-color: $primary;
     border: none;
     margin-bottom: 10px;
     
     &:hover {
-      background-color: $primary-color;
+      background-color: $primary;
       opacity: 0.9;
     }
   }
