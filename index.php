@@ -36,7 +36,7 @@
           <a class="page" href="">
             <li>Home</li>
           </a>
-          <a class="page" href="./login/lor.php">
+          <a class="page" href="./private/login/lor.php">
             <li>Profile</li>
           </a>
         </ul>
@@ -84,16 +84,6 @@
           <img class="img-fluid rounded" src="./images/competition.png">
         </section>
       </div>
-    </div>
-
-
-
-    <!--Download-------------------------->
-    <div class="row download">
-      <section class="col-md-4 offset-md-4">
-        <p>Want to play our games? Download our application!
-        <a class="btn btn-primary" href="">Download Now</a>
-      </section>
     </div>
   </body>
 </html>
