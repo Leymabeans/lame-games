@@ -115,8 +115,7 @@ body {
 
 #menu .page li {
   padding: 10px 0;
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 22px;
 }
 
 .admin_none {
@@ -207,29 +206,12 @@ body {
 /*Information========================*/
 .info {
   margin-top: 170px;
+  margin-bottom: 120px;
 }
 
 .info img {
   width: 80%;
   height: 300px;
-}
-
-/*Download========================*/
-.download {
-  margin-top: 140px;
-  text-align: center;
-}
-
-.download a {
-  display: block;
-  background-color: #700a5e;
-  border: none;
-  margin-bottom: 10px;
-}
-
-.download a:hover {
-  background-color: #700a5e;
-  opacity: 0.9;
 }
 
 /*Login and SignUp========================*/

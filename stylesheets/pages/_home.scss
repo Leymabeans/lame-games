@@ -27,29 +27,10 @@
 /*Information========================*/
 .info {
   margin-top: 170px;
+  margin-bottom: 120px;
 
   img {
     width: 80%;
     height: 300px;
-  }
-}
-
-
-
-/*Download========================*/
-.download {
-  margin-top: 140px;
-  text-align: center;
-
-  a {
-    display: block;
-    background-color: $primary;
-    border: none;
-    margin-bottom: 10px;
-    
-    &:hover {
-      background-color: $primary;
-      opacity: 0.9;
-    }
   }
 }
