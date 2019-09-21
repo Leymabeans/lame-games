@@ -19,7 +19,6 @@
     <!--External files----------------------------->
     <link href="./images/favicon.ico" rel="shortcut icon">
     <link href="./stylesheets/index.css" rel="stylesheet" type="text/css">
-    <script src="./js/index.js" rel="script" type="text/javascript"></script>
   </head>
 
 
@@ -36,8 +35,9 @@
           <a class="page" href="">
             <li>Home</li>
           </a>
-          <a class="page" href="./private/login/lor.php">
-            <li>Profile</li>
+          <a class="page">
+            <script src="./js/index.js" rel="script" type="text/javascript"></script>
+            <li><button onclick="los()">Profile</button></li>
           </a>
         </ul>
       </div>
@@ -71,7 +71,7 @@
           <article>Here at Lame Games we use leading edge code to bring creative ideas to life. We take our development serious, as each game goes through rigorous development, testing, and deployment.</article>
         </section>
       </div>
-
+      
       <div class="row info">
         <section class="col-md-7">
           <hgroup class="heading mb-2">
@@ -83,6 +83,36 @@
         <section class="col-md-5">
           <img class="img-fluid rounded" src="./images/competition.png">
         </section>
+      </div>
+    </div>
+
+
+
+    <!--Login Modal-------------------------->
+    <div id="los" class="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <span class="close">&times;</span>
+        </header>
+        <main class="modal-body">
+          <div class="row">
+            <form class="col-md-6" method="post" action="./signup.php" enctype="multipart/fprm-data" autocomplete="false">
+              <h3 class="display-6">Signup</h3>
+              <input class="form-control mb-2" type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" required pattern="[A-Za-z]{3,}"" title="Only contain letters. 3 characters or more">
+              <input class="form-control mb-2" type="text" name="last_name" placeholder="Last Name" onfocus="this.placeholder = ''" required pattern="[A-Za-z]{2,}"" title="Only contain letters. 2 characters or more">
+              <input class="form-control mb-2" type="text" name="username"placeholder="Username" onfocus="this.placeholder = ''" required pattern="[A-Za-z0-9]{3,}"" title="Only contain letters and numbers. 4 characters or more">
+              <input class="form-control mb-2" type="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters">
+              <button class="btn btn-pimary" type="submit" value="Sign Up">
+            </form>
+
+            <form class="col-md-6" method="post" action="./login.php" enctype="multipart/fprm-data" autocomplete="false">
+              <h3 class="display-6">Login</h3>
+              <input class="form-control mb-2" type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" required pattern="[A-Za-z0-9]{3,}"" title="Only contain letters and numbers. 4 characters or more"><br>
+              <input class="form-control mb-2" type="password" placeholder="Password" onfocus="this.placeholder = ''" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"><br>
+              <button class="btn btn-pimary" type="submit" value="Login">
+            </form>
+          </div>
+        </main>
       </div>
     </div>
   </body>
