@@ -88,5 +88,17 @@
       padding: 10px 0;
       font-size: 22px;
     }
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      color: $primary;
+      cursor: pointer;
+      
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
