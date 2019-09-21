@@ -1,11 +1,15 @@
-function myFunction() {
-   myVar = setTimeout(showPage, 300);
-}  
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
+/*Opening LOS modal===============================*/
+function los() {
+  var span = document.getElementsByClassName("close")[0];
+  var modal = document.getElementById("los");
+  modal.style.display = "block";
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
 }
 
+
+/*Display game statistics========================*/
 function display1() {
   document.getElementById('global').innerHTML = "Cross Country Collin";
   document.getElementById('ccc').style.display = "block";
