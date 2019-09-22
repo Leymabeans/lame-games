@@ -8,3 +8,12 @@ body {
 ::-webkit-scrollbar { 
   display: none; 
 }
+
+.button {
+  background-color: $primary;
+  border: none;
+
+  &:hover {
+    background-color: $primary * 1.2;
+  }
+}
