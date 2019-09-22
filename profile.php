@@ -1,12 +1,12 @@
 <?php
-  //1 Check if user is logged in
-  include "./includes/key-check.php";
-
-  //2 Connect to Lame Games database
+  //1 Connect to Lame Games database
   include "./includes/db-connection.php";
   
+  //2 Variable configuration
+  $player = $_POST['player'];
+
   //3 Retrieve information from users table
-  $query = mysqli_query($db, "SELECT first_name, last_name, username, ccc_score, ccc_rank, dof_score, dof_rank FROM users WHERE username ='" . $_SESSION['username'] . "'");  
+  $query = mysqli_query($db, "SELECT first_name, last_name, username, ccc_score, ccc_rank, dof_score, dof_rank FROM users WHERE username ='$player'");  
   
   //4 Check if query was successful
   include "./includes/query-success.php";
@@ -19,11 +19,11 @@
   }
 
   //6 Retrieve number of matches from dof table
-  $dof = mysqli_query($db, "SELECT * FROM dof_stats WHERE username ='" . $_SESSION['username'] . "'");
+  $dof = mysqli_query($db, "SELECT * FROM dof_stats WHERE username ='$player'");
   $dof_matches = mysqli_num_rows($dof);
 
   //7 Retrieve number of matches from ccc table
-  $ccc = mysqli_query($db, "SELECT * FROM ccc_stats WHERE username ='" . $_SESSION['username'] . "'");
+  $ccc = mysqli_query($db, "SELECT * FROM ccc_stats WHERE username ='$player'");
   $ccc_matches = mysqli_num_rows($ccc);
 
   //8 Close connection to Lame Games database
@@ -55,28 +55,8 @@
 
 
 
-  <!--Navigation---------------------------------->
-  <body>  
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox"/>
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <a class="page" href="./index.php">
-            <li>Home</li>
-          </a>
-          <a class="page" href="./logout.php">
-            <li>Logout</li>
-          </a>
-        </ul>
-      </div>
-    </nav>
- 
-
-
-    <!--Header-------------------------------->
+  <!--Header-------------------------------->
+  <body> 
     <header class="container-fluid">
       <div class="half-parrallax">
         <div class="page-title">
@@ -89,49 +69,51 @@
 
     <!--Profile-------------------------------->
     <div class="container">
-      <div class="row rounded">
-      <section class="col-md-12">
-        <img class="img-fluid rounded mt-5 col-md-2" src="./images/user_pic.jpg" width="120" height="120">
-        <h2 class="col-md-3"><?php echo $result['username'] ?><h2>
-        <button type="button" class="btn btn-primary btn-lg button" id="display1" onclick="display1()">Cross Country Collin</button>
-        <button type="button" class="btn btn-primary btn-lg button" id="display2" onclick="display2()">Duel of the Fates</button>
-      </section> 
+      <div class="row">
+        <section class="col-md-4">
+          <img class="img-fluid rounded mt-5" src="./images/user_pic.jpg" width="120" height="120">
+          <h1 class="font-weight-bold"><?php echo $result['username'] ?><h1>
+          <h5><?php echo $result['first_name']; echo $result['last_name'];?><h5>
+        </section>
 
+        <section class="col-md-8">    
+          <div class="mb-5">
+            <h3 class="display-6">Cross Country Collin</h3>
+            <table class="table table-bordered table-hover rounded col-md-12">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Score</th>
+                  <th>Matches Played</th>
+                  <th>Rank</th>
+                </tr>
+              </thead>
+              <tr>
+                <td><?php echo $result['ccc_score']?></td>
+                <td><?php echo $ccc_matches?></td>
+                <td><?php echo $result['ccc_rank']?></td>
+              </tr>
+            </table>
+          </div>
 
-      
-    <!--Cross Country Collin====================-->
-    <section id="rank">        
-      <h1 id="global">Cross Country Collin</h1>
-      <div id="ccc">
-        <table class="results">
-          <tr>
-            <th>Score</th>
-            <th>Matches Played</th>
-            <th>Rank</th>
-          </tr>
-          <tr>
-            <td><?php echo $result['ccc_score']?></td>
-            <td><?php echo $ccc_matches?></td>
-            <td><?php echo $result['ccc_rank']?></td>
-          </tr>
-        </table>
+          <div class="mt-5 mb-5">
+            <h3 class="display-6">Duel of the Fates</h3>
+            <table class="table table-bordered table-hover rounded col-md-12">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Score</th>
+                  <th>Matches Played</th>
+                  <th>Rank</th>
+                </tr>
+              </thead>
+              <tr>
+                <td><?php echo $result['dof_score']?></td>
+                <td><?php echo $dof_matches?></td>
+                <td><?php echo $result['dof_rank']?></td>
+              </tr>
+            </table>
+          </div>
+        </section> 
       </div>
-
-      <!--Duel of the Fates====================-->
-      <div id="dof">
-        <table class="results" >
-          <tr>
-            <th>Score</th>
-            <th>Matches Played</th>
-            <th>Rank</th>
-          </tr>
-          <tr>
-            <td><?php echo $result['dof_score']?></td>
-            <td><?php echo $dof_matches?></td>
-            <td><?php echo $result['dof_rank']?></td>
-          </tr>
-        </table>
-      </div>
-    </section>
+    </div> 
   </body>
 </html>

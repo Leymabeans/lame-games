@@ -1,29 +1,24 @@
 <?php
-  //1 Check if user is admin
-  include './includes/key-check.php';
-
-  //2 Connect to Matrix64 database
+  //1 Connect to Matrix64 database
   include './includes/db-connection.php';
 
-  //3 Retrieve all information from users table
+  //2 Retrieve all information from users table
   $query = mysqli_query($db, "SELECT first_name, last_name, username FROM users"); 
-  
-  //4 Check if query was successful
   include './includes/query-success.php';
 
-  //5 Retrieve number of matches from games tables
+  //3 Retrieve number of matches from games tables
   $match1 = mysqli_query($db, "SELECT * FROM dof_stats");
   $dof_matches = mysqli_num_rows($match1);
   $match2 = mysqli_query($db, "SELECT * FROM ccc_stats");
   $ccc_matches = mysqli_num_rows($match2);
 
-  //6 Retrieve number of players from games tables
+  //4 Retrieve number of players from games tables
   $player1 = mysqli_query($db, "SELECT DISTINCT(username) FROM dof_stats");
   $dof_players = mysqli_num_rows($player1);
   $player2 = mysqli_query($db, "SELECT DISTINCT(username) FROM ccc_stats");
   $ccc_players = mysqli_num_rows($player2);
 
-  //7 Close connection to database
+  //5 Close connection to database
   mysqli_close($db);
 ?>
 
@@ -50,29 +45,9 @@
   </head>
 
 
-  
-  <!--Navigation---------------------------------->
+
+  <!--Header-------------------------------->
   <body>
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox"/>
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <a class="page" href="./index.php">
-            <li>Home</li>
-          </a>
-          <a class="page" href="./logout.php">
-            <li>Logout</li>
-          </a>
-        </ul>
-      </div>
-    </nav>
-
-
-
-    <!--Header-------------------------------->
     <header class="container-fluid">
       <div class="half-parrallax">
         <div class="page-title">
