@@ -11,6 +11,15 @@ body {
   display: none;
 }
 
+.button {
+  background-color: #700a5e;
+  border: none;
+}
+
+.button:hover {
+  background-color: #860c71;
+}
+
 #menuToggle {
   display: block;
   position: relative;
@@ -189,64 +198,8 @@ body {
   }
 }
 
-.admin_none {
-  background-color: white;
-  color: white;
-}
-
-.admin_header {
-  background-color: #700a5e;
-  height: 80px;
-  width: 100vw;
-  padding-bottom: 10px;
-}
-
-.panels {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: justify;
-}
-
-.panels .title {
-  font-size: 60px;
-  margin: 10px auto 5px auto;
-}
-
-.panels .manage {
-  margin: 10px auto;
-}
-
-.panels #users {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  text-align: center;
-  background-color: #700a5e;
-  border-radius: 10px;
-  padding: 35px 20px;
-  margin: 100px 20px;
-}
-
-.panels #games {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  text-align: center;
-  background-color: #700a5e;
-  border-radius: 10px;
-  padding: 35px 20px;
-  margin: 100px 20px;
-}
-
-/*Parrallax Header===================*/
-.parrallax {
+/*Parrallax Headers===================*/
+.full-parrallax, .half-parrallax {
   background-image: url("../images/jumbotron.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -258,7 +211,7 @@ body {
   width: 100vw;
 }
 
-.parrallax .intro {
+.full-parrallax .intro, .half-parrallax .intro {
   position: absolute;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(112, 10, 94, 0.6)), to(rgba(112, 10, 94, 0.6)));
   background: linear-gradient(rgba(112, 10, 94, 0.6), rgba(112, 10, 94, 0.6));
@@ -270,109 +223,37 @@ body {
   padding: 5px 15px;
 }
 
-.parrallax .intro h1 {
-  font-size: 80px;
+.full-parrallax .intro h1, .half-parrallax .intro h1 {
+  font-size: 84px;
 }
 
-.none {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 0.5fr 2.5fr 4fr 3fr;
-      grid-template-rows: 1fr 0.5fr 2.5fr 4fr 3fr;
-  -ms-grid-columns: 4fr 5fr 15fr 4fr;
-      grid-template-columns: 4fr 5fr 15fr 4fr;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(112, 10, 94, 0.6)), to(rgba(112, 10, 94, 0.6))), url("../images/setup2.jpg");
-  background: linear-gradient(rgba(112, 10, 94, 0.6), rgba(112, 10, 94, 0.6)), url("../images/setup2.jpg");
-  min-height: 100%;
-  min-width: 100%;
-  background-size: cover;
-  background-position: center;
+.half-parrallax {
+  height: 50vh;
+  margin-bottom: 120px;
+}
+
+.half-parrallax .page-title {
+  position: absolute;
+  text-align: center;
   color: white;
-}
-
-/*Header and Navigation============*/
-.header {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-column: 1 / 7;
-  background-color: #700a5e;
+  top: 18%;
+  left: 0;
   width: 100%;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
 }
 
-.header .logout {
-  float: right;
-  text-decoration: none;
-  background-color: white;
-  color: #700a5e;
-  padding: 7px 18px;
-  border-radius: 5px;
-  margin: 0px 20px 5px 20px;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+.half-parrallax .page-title h1 {
+  font-size: 84px;
 }
 
-.header:hover {
-  cursor: pointer;
-  opacity: 0.8;
+/*Information========================*/
+.info {
+  margin-top: 170px;
+  margin-bottom: 120px;
 }
 
-/*Individual Profile==============*/
-#profile {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2 / 4;
-  background-color: #700a5e;
-  width: 100%;
-  border-radius: 10px;
-  margin: 0px auto 50px auto;
-}
-
-#profile .profile-pic {
-  float: left;
-  width: 120px;
-  height: 120px;
-  border-radius: 8px;
-  margin: 10px;
-}
-
-#profile #user {
-  float: left;
-  font-size: 52px;
-}
-
-#profile .games {
-  display: inline;
-  font-weight: bolder;
-  background-color: white;
-  color: #700a5e;
-  width: 47%;
-  padding: 8px 20px;
-  border: none;
-  border-radius: 5px;
-  margin: auto;
-  -webkit-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-#profile:hover {
-  cursor: pointer;
-  opacity: 0.9;
-}
-
-#profile:focus {
-  outline: none;
-}
-
-#display1 {
-  margin-left: 10px;
+.info img {
+  width: 80%;
+  height: 300px;
 }
 
 /*Rankings=======================*/

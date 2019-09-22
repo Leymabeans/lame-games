@@ -1,8 +1,8 @@
 <?php
   $host = "localhost";
-  $account = "rkedzjmy_admin";
-  $pass = "H8Yr!SQI?a*6";
-  $database = "rkedzjmy_lamegames";
+  $account = "root";
+  $pass = "";
+  $database = "lamegames";
 
   $db = mysqli_connect($host, $account, $pass, $database);
   if ($db === false ) {
