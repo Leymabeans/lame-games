@@ -13,130 +13,28 @@ body {
 
 .button {
   background-color: #700a5e;
+  width: 150px;
   border: none;
+  padding: 10px 5px;
+  margin-top: 20px;
 }
 
 .button:hover {
   background-color: #860c71;
 }
 
-#menuToggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+.button:active {
+  background-color: #700a5e;
 }
 
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0;
-  /* hide this */
-  z-index: 2;
-  /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-          transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-          transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menuToggle input:checked ~ ul {
-  -webkit-transform: none;
-          transform: none;
-}
-
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background-color: white;
-  border-radius: 3px;
-  z-index: 1;
-  -webkit-transform-origin: 4px 0px;
-          transform-origin: 4px 0px;
-  -webkit-transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-#menuToggle span:first-child {
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
-}
-
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  border-bottom-right-radius: 3px;
-  background-color: white;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-#menu .page {
-  color: #700a5e;
-  text-decoration: none;
-}
-
-#menu .page li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-#menu .page button {
-  background: none;
-  border: none;
-  padding: 0;
-  color: #700a5e;
-  cursor: pointer;
-}
-
-#menu .page button:focus {
+.button:focus {
+  background-color: #700a5e;
   outline: none;
+}
+
+.buffer {
+  margin-top: 170px;
+  margin-bottom: 120px;
 }
 
 .modal {
@@ -205,7 +103,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -29px;
   margin-left: -15px;
   height: 100vh;
   width: 100vw;
@@ -244,56 +141,3 @@ body {
 .half-parrallax .page-title h1 {
   font-size: 84px;
 }
-
-/*Information========================*/
-.info {
-  margin-top: 170px;
-  margin-bottom: 120px;
-}
-
-.info img {
-  width: 80%;
-  height: 300px;
-}
-
-/*Rankings=======================*/
-#rank {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4 / 5;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2 / 4;
-  background-color: #700a5e;
-  width: 100%;
-  border-radius: 10px;
-  margin: 0px auto 200px auto;
-}
-
-#rank #global {
-  text-align: center;
-  color: white;
-  font-size: 36px;
-  margin: 8px auto;
-}
-
-#rank #dof {
-  display: none;
-}
-
-#rank .results {
-  text-align: center;
-  margin: 10px auto;
-  padding: 5px;
-}
-
-#rank th {
-  font-size: 18px;
-  padding: 15px 5px 10px 5px;
-  margin: 10px auto 0px auto;
-}
-
-#rank td {
-  opacity: 0.5;
-}
-/*# sourceMappingURL=index.css.map */

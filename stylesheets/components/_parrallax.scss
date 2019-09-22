@@ -1,7 +1,6 @@
 /*Parrallax Headers===================*/
 .full-parrallax {
   @include bg-image("../images/jumbotron.jpg");
-  margin-top: -29px;
   margin-left: -15px;
   height: 100vh;
   width: 100vw;
