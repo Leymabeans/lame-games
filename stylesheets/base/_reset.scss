@@ -11,9 +11,26 @@ body {
 
 .button {
   background-color: $primary;
+  width: 150px;
   border: none;
+  padding: 10px 5px;
+  margin-top: 20px;
 
   &:hover {
     background-color: $primary * 1.2;
   }
+
+  &:active {
+    background-color: $primary;
+  }
+
+  &:focus {
+    background-color: $primary;
+    outline: none;
+  }
+}
+
+.buffer {
+  margin-top: 170px;
+  margin-bottom: 120px;
 }
