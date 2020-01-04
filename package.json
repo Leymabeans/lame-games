@@ -1,0 +1,25 @@
+{
+  "name": "lame-games",
+  "version": "5.0.0",
+  "description": "<p align=\"center\">\r   <img src=\"https://raw.githubusercontent.com/nathanleysgit/lame-games/master/src/img/title.jpg\" height=\"400\" width=\"400\"/>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanLeysGit/lame-games.git"
+  },
+  "keywords": [],
+  "author": "Nathan Ley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanLeysGit/lame-games/issues"
+  },
+  "homepage": "https://github.com/NathanLeysGit/lame-games#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}

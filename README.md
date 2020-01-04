@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nathanleysgit/lame-games/master/images/title.jpg" height="400" width="400"/>
+  <img src="https://raw.githubusercontent.com/nathanleysgit/lame-games/master/src/img/title.jpg" height="400" width="400"/>
 </p>
 
 ## Overview
@@ -10,4 +10,4 @@ This repository contains all the files of this website and the application. Our 
 
 ## Development
 Nathan Ley <b>(NathanLeysGit)</b> built the front and backend of the website and Andrew Zwiefel <b>(Zellazoom)</b> created
-application. Both are respondsible for building the games you enjoy but are not respondsible if you mom yells at you for playing our video games too much. <br><br>
+application. Both are responsible for building the games you enjoy but are not respondsible if you mom yells at you for playing our video games too much. <br><br>
