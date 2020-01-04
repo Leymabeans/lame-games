@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+$primary: rgb(112, 10, 94);
+$light-primary: rgba($primary, 0.6);
+$white: rgba(255, 255, 255, 1);
+
 $font-family: 'Open Sans', sans-serif;
 $light: 100;
 $regular: 400;
@@ -9,4 +12,3 @@ $small-medium: 22px;
 $medium: 28px;
 $medium-large: 36px;
 $large: 84px;
-
