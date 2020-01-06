@@ -24,14 +24,72 @@
     
 
 
-  <!--Header-------------------------------->
+  <!--Navigation-------------------------------->
   <body>
-    <header class="container-fluid">
-      <div class="full-parrallax">
-        <div class="intro">
-        <h1 class="display-6">Lame Games</h1>
-        <p>Wasting time since '18</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand mb-0 h1" href="./index.html">
+          <img src="./icon/navigation.png" width="35" height="35" class="d-inline-block align-top" alt="Icon">Lame Games
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./download.html">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./news.html">News</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+
+
+
+    <!--Header-------------------------------------->
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active" style="background-image: url('./img/jumbotron-1.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Design</h2>
+              <p class="lead">Layout game idea and brainstorm</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('./img/jumbotron-2.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Develop</h2>
+              <p class="lead">Write some code, bring the game to life</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('./img/jumbotron-3.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Game</h2>
+              <p class="lead">The most important and fun part</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </header>
 
@@ -41,64 +99,30 @@
     <div class="container">
       <div class="row buffer" data-entrance="from-left">
         <section class="col-md-5">
-          <img class="img-fluid rounded" src="./img/development.jpg" width="80%" height="300px">
+          <img class="img-fluid rounded" src="./img/profile.JPG" width="80%" height="300px">
         </section>
         <section class="col-md-7">
           <hgroup class="heading mb-2">
-            <h4 class="page-header text-muted">Develop</h4>
-            <h1 class="display-6 font-weight-bolder">Cutting Edge Games</h1>    
+            <h4 class="page-header text-muted">Fullstack Developer</h4>
+            <h1 class="display-6 font-weight-bolder">Nathan Ley</h1>    
           </hgroup>
-          <article>Here at Lame Games we use leading edge code to bring creative ideas to life. We take our development serious, as each game goes through rigorous development, testing, and deployment.</article>
-          <a href="./download.html" class="btn btn-info button" role="button">Download</a>
+          <article>Hey everyone! My name is Nathan Ley and I am a fullstack developer and Lame Games co-founder. I have built the website you are utlizing looking at right now, as well as the parts that you don't see. </article>
+          <input type="button" class="btn btn-primary button" onclick="location.href='mailto:nathanley.work@gmail.com';" value="Contact"/>
         </section>
       </div>
       
       <div class="row buffer" data-entrance="from-right">
         <section class="col-md-7">
           <hgroup class="heading mb-2">
-            <h4 class="page-header text-muted">Competition</h4>
-            <h1 class="display-6 font-weight-bolder">Messing Around</h1>    
+            <h4 class="page-header text-muted">Game Developer</h4>
+            <h1 class="display-6 font-weight-bolder">Andrew Zwiefel</h1>    
           </hgroup>
-          <article>Not all of our games are well developed. The creators at Lame Games hold friendly coding competitions where they develop the best game they can in an alloted period of time. These videos can be seen on our YouTube channel</article>
-          <a href="https://www.youtube.com" class="btn btn-info button" role="button">Watch</a>
+          <article>What's up! I am Andrew Zwiefel, the actual game developer of Lame Games. I have built the games you enjoy and the application it is hosted on. </article>
+          <input type="button" class="btn btn-primary button" onclick="location.href='mailto:azwiefman@gmail.com';" value="Contact"/>
         </section>
         <section class="col-md-5">
-          <img class="img-fluid rounded" src="./img/competition.png" width="80%" height="250px">
+          <img class="img-fluid rounded" src="./img/profile-2.JPG" width="80%" height="250px">
         </section>
-      </div>
-
-      <div class="row buffer" data-entrance="from-left">
-        <section class="col-md-5">
-          <img class="img-fluid rounded" src="./img/search.png" width="80%" height="300px">
-        </section>
-        <section class="col-md-7">
-          <hgroup class="heading mb-2">
-            <h4 class="page-header text-muted">News</h4>
-            <h1 class="display-6 font-weight-bolder">Be Updated</h1>    
-          </hgroup>
-          <article>We post our current progress on game development, release sneak peeks, and explain our whole process</article>
-          <a href="./news.html" class="btn btn-info button" role="button">Read</a>
-        </section>
-      </div>
-    </div>
-
-
-
-    <!--Search Modal-------------------------->
-    <div id="search" class="modal">
-      <div class="modal-content">
-        <header class="modal-header">
-          <span class="close">&times;</span>
-        </header>
-        <main class="modal-body">
-          <div class="row">
-            <form class="col-md-12" method="post" action="./profile.php" enctype="multipart/fprm-data" autocomplete="false">
-              <h3 class="display-6">Search</h3>
-              <input type="text" class="form-control mb-2" name="player" placeholder="Search Players" onfocus="this.placeholder = ''" required>
-              <button type="submit" class="btn btn-primary btn-lg button">Search</button>
-            </form>
-          </div>
-        </main>
       </div>
     </div>
   </body>

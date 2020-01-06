@@ -1,0 +1,17 @@
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.news-jumbotron {
+  @include masthead("../img/news-jumbotron.jpg");
+}
+
+.download-jumbotron {
+  @include masthead("../img/download-jumbotron.jpg");
+}

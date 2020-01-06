@@ -1,7 +1,8 @@
-@mixin bg-image($url) {
+@mixin masthead($url) {
+  height: 100vh;
+  min-height: 500px;
   background-image: url($url);
-  background-attachment: fixed;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }

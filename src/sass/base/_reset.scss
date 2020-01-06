@@ -10,25 +10,14 @@ body {
 }
 
 .button {
-  background-color: $primary;
   position: relative;
   width: 150px;
   border: none;
   padding: 10px 5px;
   margin-top: 20px;
 
-  &:hover {
-    background-color: $hover;
-  }
-
   &:active {
-    background-color: $hover;
-    transform: translateY(4px);
-  }
-
-  &:focus {
-    background-color: $hover;
-    outline: none;
+    transform: translateY(6px);
   }
 }
 
