@@ -1,0 +1,30 @@
+.post-header {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+
+  .post-title {
+    font-size: $large;
+  }
+
+  .post-img {
+    width: 100%;
+    height: 30rem;
+  }
+}
+
+.post-content {
+  font-size: $small;
+  text-indent: 2rem;
+  line-height: 2.2rem;
+
+  p {
+    margin: 2rem 1rem;
+  }
+}
+
+.post-related {
+  text-align: center;
+  font-size: $medium-large;
+  margin-bottom: 2rem;
+}
