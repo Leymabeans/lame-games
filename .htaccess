@@ -1,2 +1,15 @@
+#Mod Rewrite starts
+RewriteEngine on
+
+#If folder exists on server, don't change and don't run the rule
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Check for file in directory with .html extension
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+#Show page that containes .html extension 
+RewriteRule ^(.*)$ $1.html [NC, L]
+
+
 #Set default 404 page to custom HTML page
 ErrorDocument 404 /404.html
