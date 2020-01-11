@@ -1,1 +1,2 @@
+#Set default 404 page to custom HTML page
 ErrorDocument 404 /404.html
