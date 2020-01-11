@@ -11,17 +11,17 @@ body {
 
 .btn {
   position: relative;
-  width: 150px;
+  width: 9.4rem;
   border: none;
-  padding: 10px 5px;
-  margin-top: 20px;
+  padding: 0.6rem 0.3rem;
+  margin-top: 1.2rem;
 
   &:active {
-    transform: translateY(6px);
+    transform: translateY(0.4rem);
   }
 }
 
 .buffer {
-  margin-top: 170px;
-  margin-bottom: 120px;
+  margin-top: 10.6rem;
+  margin-bottom: 7.5rem;
 }
