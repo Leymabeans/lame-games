@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/NathanLeysGit/lame-games#readme",
   "devDependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "parcel-bundler": "^1.12.4"
   }
 }
